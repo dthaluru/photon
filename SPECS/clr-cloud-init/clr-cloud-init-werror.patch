@@ -1,0 +1,13 @@
+--- a/Makefile.am	2016-02-08 13:48:16.000000000 -0800
++++ b/Makefile.am	2016-03-22 18:15:47.900116342 -0800
+@@ -7,8 +7,8 @@
+ 	-Wstrict-prototypes -Wundef -fno-common \
+ 	-Werror-implicit-function-declaration \
+ 	-Wformat -Wformat-security -Werror=format-security \
+-	-Wconversion -Wunused-variable -Wunreachable-code \
+-	-Wall -W -Werror
++	-Wconversion -Wunreachable-code \
++	-Wall -W
+ 
+ 
+ EXTRA_DIST = \
