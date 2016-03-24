@@ -10,6 +10,7 @@ Distribution: 	Photon
 Source0:	%{name}-%{version}.tar.xz
 %define sha1 util-linux=462bca6320535d39b62216d8609da5531bfef0bb
 BuildRequires:	ncurses-devel
+BuildRequires:	automake
 %description
 Utilities for handling file systems, consoles, partitions,
 and messages.

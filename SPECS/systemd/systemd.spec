@@ -24,6 +24,7 @@ BuildRequires:	kbd
 BuildRequires:	kmod
 Requires:	kmod
 BuildRequires:	glib-devel
+BuildRequires:	util-linux-devel
 Requires:	glib
 %description
 Systemd is an init replacement with better process control and security

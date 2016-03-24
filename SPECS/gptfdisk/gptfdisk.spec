@@ -13,6 +13,7 @@ Patch0:		http://www.linuxfromscratch.org/patches/blfs/systemd/gptfdisk-0.8.10-co
 Requires: 	popt >= 1.16
 BuildRequires:	popt-devel
 BuildRequires:	ncurses-devel
+BuildRequires:	util-linux-devel
 Requires:	ncurses
 %description
 The gptfdisk package is a set of programs for creation and maintenance of GUID Partition 

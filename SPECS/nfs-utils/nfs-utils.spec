@@ -11,6 +11,7 @@ Vendor:		VMware, Inc.
 Distribution:	Photon
 BuildRequires: krb5
 BuildRequires: libtirpc-devel
+BuildRequires:	util-linux-devel
 Requires: python2-libs
 Requires: libtirpc
 

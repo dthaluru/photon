@@ -9,6 +9,7 @@ Vendor:		VMware, Inc.
 Distribution:	Photon
 Source0:	http://ftp.gnu.org/gnu/parted/%{name}-%{version}.tar.xz
 %define sha1 parted=8cabb2d6789badec15c857dcc003d0dd931a818b
+BuildRequires:	util-linux-devel
 %description
 My lib
 %prep

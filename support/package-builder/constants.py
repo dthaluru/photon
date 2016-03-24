@@ -31,7 +31,7 @@ class constants(object):
         "libgcc","libgcc-devel","libstdc++","libstdc++-devel","libgomp","libgomp-devel","gcc",
         "pkg-config", "ncurses", "bash", "bzip2", "sed","procps-ng","coreutils", "m4","grep",
         "readline","diffutils","gawk", "findutils", "gettext", "gzip","make",  "patch",
-        "util-linux", "tar", "xz","libtool", "flex",  "bison",
+        "util-linux","util-linux-devel", "tar", "xz","libtool", "flex",  "bison",
         "lua","popt","nspr","sqlite-autoconf","nss","elfutils-libelf",
         "libpipeline", "gdbm","perl","texinfo","rpm","rpm-build", "rpm-devel",
         "autoconf","automake", "groff", "man-db", "man-pages","elfutils","cpio"]
