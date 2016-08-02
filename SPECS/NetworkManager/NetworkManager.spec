@@ -56,7 +56,7 @@ NetworkManager is a set of co-operative tools that make networking simple and st
 	--enable-ifcfg-rh=yes \
 	--with-setting-plugins-default='ifcfg-rh,ibft'
 
- 
+
 make %{?_smp_mflags}
 %install
 make DESTDIR=%{buildroot} install

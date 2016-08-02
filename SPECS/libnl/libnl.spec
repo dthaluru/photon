@@ -31,7 +31,7 @@ Headers and static libraries for the libnl
 ./configure \
 	--prefix=%{_prefix} \
 	--sysconfdir=%{_sysconfdir} \
- 
+
 make %{?_smp_mflags}
 %install
 make DESTDIR=%{buildroot} install

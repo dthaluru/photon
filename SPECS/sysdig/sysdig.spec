@@ -59,7 +59,7 @@ rm -rf %{buildroot}/*
 
 %postun
 /sbin/depmod -a
- 
+
 %files
 %defattr(-,root,root)
 /etc/bash_completion.d/* 

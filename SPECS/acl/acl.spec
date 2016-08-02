@@ -93,7 +93,7 @@ chmod 0755 %{buildroot}%{_libdir}/libacl.so.*.*.*
 %{_datadir}/doc/acl/*   
 %{_libexecdir}/libacl.a
 %{_libexecdir}/libacl.so
-   
+
 %files -n libacl
 %{_libdir}/libacl.so.*
 

@@ -20,7 +20,7 @@ mechanisms, extensive logging capabilities, the ability to make
 services available based on time, can place limits on the number 
 of servers that can be started, and has a configurable defence 
 mechanism to protect against port scanners, among other things.
- 
+
 %prep
 %setup -q
 
@@ -83,4 +83,4 @@ fi
 -   Add xinetd library to photon
 *   Sun Sep 07 2003 Steve Grubb <linux_4ever@yahoo.com>
 -   Refined installation and added services.
- 
+

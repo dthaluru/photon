@@ -33,7 +33,7 @@ echo "%dir %{python_sitelib}/iotop" >> INSTALLED_FILES
 
 %clean
 rm -rf %{buildroot}/*
- 
+
 %files -f INSTALLED_FILES
 %defattr(-,root,root)
 %doc COPYING NEWS THANKS

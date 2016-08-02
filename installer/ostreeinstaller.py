@@ -93,7 +93,7 @@ class OstreeInstaller(Installer):
         self.window.show_window()
         self.progress_bar.initialize("Initializing installation...")
         self.progress_bar.show()
-        
+
         self.execute_modules(modules.commons.PRE_INSTALL)
 
         disk = self.install_config['disk']['disk']

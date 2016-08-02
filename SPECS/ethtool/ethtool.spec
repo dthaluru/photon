@@ -28,7 +28,7 @@ make install DESTDIR=%{buildroot}
 
 %clean
 rm -rf %{buildroot}/*
- 
+
 %files
 %doc AUTHORS COPYING NEWS README ChangeLog
 %defattr(-,root,root)

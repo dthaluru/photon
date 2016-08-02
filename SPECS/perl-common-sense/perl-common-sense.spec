@@ -23,7 +23,7 @@ by two typical (or not so typical - use your common sense) specimens of
 Perl coders:
 
 It's supposed to be mostly the same, with much lower memory usage, as:
- 
+
 	use utf8;
 	use strict qw(vars subs);
 	use feature qw(say state switch);

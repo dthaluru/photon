@@ -92,7 +92,7 @@ class Menu(Action):
         if self.show_scroll:
             remaining_above = self.head_position
             remaining_down = self.num_items - self.height - self.head_position#
-            
+
             up = int(round(remaining_above * self.height / float(self.num_items)))
             down = self.height - up - self.filled
 
@@ -181,7 +181,7 @@ class Menu(Action):
             elif key in [ord('\t')] and self.can_navigate_outside:
                 self.refresh(False)
                 return ActionResult(False, None)
-            
+
             elif key == curses.KEY_UP or key == curses.KEY_LEFT:
                 self.navigate(-1)
 

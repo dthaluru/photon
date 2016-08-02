@@ -92,7 +92,7 @@ EOF
 
 %clean
 rm -rf %{buildroot}/*
- 
+
 %files
 %doc COPYING NEWS README ChangeLog
 %defattr(-,root,root)

@@ -72,7 +72,7 @@ if [ $1 -eq 1 ] ; then
 fi
 %{_sbindir}/ldconfig
 %systemd_post zookeeper.service
- 
+
 %preun
 if [ $1 -eq 0 ] ; then
 source %{_sysconfdir}/profile.d/java-exports.sh

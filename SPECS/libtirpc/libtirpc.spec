@@ -64,7 +64,7 @@ make install DESTDIR=%{buildroot}
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
 %{_includedir}/tirpc/*
-   
+
 
 %changelog
 *	Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 1.0.1-3

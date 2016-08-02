@@ -16,7 +16,7 @@ class TextPane(Action):
         self.menu_items = menu_items;
 
         self.width = width
-        
+
         self.read_file(text_file_path, self.width - 3);
 
         self.num_items = len(self.lines)
@@ -91,7 +91,7 @@ class TextPane(Action):
         if self.show_scroll:
             remaining_above = self.head_position
             remaining_down = self.num_items - self.text_height - self.head_position#
-            
+
             up = int(round(remaining_above * self.text_height / float(self.num_items)))
             down = self.text_height - up - self.filled
 

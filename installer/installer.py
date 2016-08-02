@@ -173,7 +173,7 @@ class Installer(object):
                 self.window.content_window().getch()
 
         return ActionResult(True, None)
-        
+
     def copy_rpms(self):
         # prepare the RPMs list
         rpms = []
@@ -233,7 +233,7 @@ class Installer(object):
             if 'mountpoint' in partition and partition['mountpoint'] == '/':
                 options = options + ',barrier,noatime,noacl,data=ordered'
                 fsck = 1
-            
+
             if partition['filesystem'] == 'swap':
                 mountpoint = 'swap'
                 dump = 0
@@ -274,7 +274,7 @@ class Installer(object):
             command.extend(self.generate_partitions_param())
             process = subprocess.Popen(command, stdout=self.output)
             retval = process.wait()
-        
+
         if self.iso_installer:
             self.bind_installer()
             process = subprocess.Popen([self.prepare_command, '-w', self.photon_root, 'install'], stdout=self.output)
@@ -284,7 +284,7 @@ class Installer(object):
             #Setup the filesystem basics
             process = subprocess.Popen([self.prepare_command, '-w', self.photon_root], stdout=self.output)
             retval = process.wait()
-    
+
     def finalize_system(self):
         #Setup the disk
         process = subprocess.Popen([self.chroot_command, '-w', self.photon_root, self.finalize_command, '-w', self.photon_root], stdout=self.output)
@@ -332,7 +332,7 @@ class Installer(object):
             except ImportError:
                 modules.commons.log(modules.commons.LOG_ERROR, 'Error importing module {}'.format(module))
                 continue
-            
+
             # the module default is disabled
             if not hasattr(mod, 'enabled') or mod.enabled == False:
                 modules.commons.log(modules.commons.LOG_INFO, "module {} is not enabled".format(module))

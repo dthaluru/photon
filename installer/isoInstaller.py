@@ -35,7 +35,7 @@ from license import License
 from ostreeserverselector import OSTreeServerSelector
 
 class IsoInstaller(object):
-    
+
     def get_config(self, path):
         if path.startswith("http://"):
             # Do 5 trials to get the kick start
@@ -122,7 +122,7 @@ class IsoInstaller(object):
             exception_text, exception_text)
         if ret != "":
             return False, ret
-    
+
         exception_text = "Error: Invalid repo - missing refs"
         ret = self.validate_http_response(ostree_repo_url + "/refs/heads", [], exception_text, exception_text)
         if ret != "":
@@ -174,9 +174,9 @@ class IsoInstaller(object):
         else:
             if response.getcode() != 200:
                 return error_text
-        
+
         html = response.read()
-        
+
         for pattern, count, failed_check_text in checks:
             match = re.findall(pattern, html)
             if len(match) != count:
@@ -201,7 +201,7 @@ class IsoInstaller(object):
         curses.curs_set(0)
 
         self.cd_path = None;
-        
+
         kernel_params = subprocess.check_output(['cat', '/proc/cmdline'])
 
         # check the kickstart param
@@ -236,7 +236,7 @@ class IsoInstaller(object):
             hostname_accepted_chars.extend(range(48, 58))
             # Adding the . and -
             hostname_accepted_chars.extend([ord('.'), ord('-')])
-            
+
             hostname_reader = WindowStringReader(
                     self.maxy, self.maxx, 10, 70, 
                     'hostname', 
@@ -286,7 +286,7 @@ class IsoInstaller(object):
                     None, # post processing of the input field
                     'Please provide the Refspec in OSTree repo', 'OSTree Repo Refspec:', 2, install_config,
                     "photon/1.0/x86_64/minimal")
-            
+
             items = items + [
                     (license_agreement.display, False),
                     (select_disk.display, True),

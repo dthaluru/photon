@@ -11,4 +11,3 @@ class ActionResult(object):
         self.success = success
         self.result = result
 
-    

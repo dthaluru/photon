@@ -38,7 +38,7 @@ class ReadText(Action):
 
     def hide(self):
         return
-    
+
     def init_text(self):
         self.x = 0;
         #initialize the ----

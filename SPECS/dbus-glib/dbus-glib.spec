@@ -34,7 +34,7 @@ Headers and static libraries for the D-Bus GLib bindings
 	--sysconfdir=%{_sysconfdir} \
         --disable-static \
 	--disable-gtk-doc
- 
+
 make %{?_smp_mflags}
 %install
 make DESTDIR=%{buildroot} install

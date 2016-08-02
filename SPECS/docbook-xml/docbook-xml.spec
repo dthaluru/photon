@@ -136,7 +136,7 @@ if [ $1 -eq 0 ] ; then
     if [ -f /etc/xml/docbook ]; then
         xmlcatalog --noout --del \
         "file:///usr/share/xml/docbook/docbook-xml-4.5" /etc/xml/docbook
-        
+
         for DTDVERSION in 4.1.2 4.2 4.3 4.4 %{version}
         do
             xmlcatalog --noout --del \
