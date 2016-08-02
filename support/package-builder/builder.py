@@ -45,7 +45,7 @@ def main():
         cmdUtils.runCommandInShell("mkdir -p "+options.logPath)
 
     logger=Logger.getLogger(options.logPath+"/Main")
-    
+
     errorFlag=False
     package = None
     pkgInfoJsonFile=options.pkgInfoFile
@@ -64,39 +64,39 @@ def main():
     if not os.path.isdir(options.publishRPMSPath+"/noarch"):
         logger.error("Given RPMS Path is missing noarch sub-directory:"+options.publishRPMSPath)
         errorFlag = True
-    
+
     if not os.path.isfile(options.inputJSONFile) and not options.installPackage:
         logger.error("Given JSON File is not a file:"+options.inputJSONFile)
         errorFlag = True    
     if not os.path.isfile(options.pkgBuildOptionFile):
         logger.warning("Given JSON File is not a file:"+options.pkgBuildOptionFile)
-        
+
     if options.inputRPMSPath is not None and not os.path.isdir(options.inputRPMSPath):
         logger.error("Given input RPMS Path is not a directory:"+options.publishRPMSPath)
         errorFlag = True
-        
+
     if options.installPackage :
         if len(args) != 1:
             logger.error("Please provide package name")
             errorFlag = True
         else:
             package=args[0]
-        
+
     if errorFlag:
         logger.error("Found some errors. Please fix input options and re-run it.")
         return False
-    
-    
+
+
     if not os.path.isdir(options.rpmPath):
         cmdUtils.runCommandInShell("mkdir -p "+options.rpmPath+"/x86_64")
         cmdUtils.runCommandInShell("mkdir -p "+options.rpmPath+"/noarch")
 
     if not os.path.isdir(options.sourceRpmPath):
         cmdUtils.runCommandInShell("mkdir -p "+options.sourceRpmPath)
-    
+
     if not os.path.isdir(options.buildRootPath):
         cmdUtils.runCommandInShell("mkdir -p "+options.buildRootPath)
-    
+
     logger.info("Source Path :"+options.sourcePath)
     logger.info("Spec Path :" + options.specPath)
     logger.info("Rpm Path :" + options.rpmPath)
@@ -107,7 +107,7 @@ def main():
         logger.info("JSON File :" + options.inputJSONFile)
     else:
         logger.info("Package to build:"+package)
-    
+
     listBuildOptionPackages = get_packages_with_build_options(options.pkgBuildOptionFile)
 
     try:
@@ -307,7 +307,7 @@ def get_packages_with_build_options(pkg_build_options_file):
             packages.append(str(p))
 
     return packages
-    
+
 def get_all_package_names(build_install_option):
     base_path = os.path.dirname(build_install_option)
     jsonData = open(build_install_option)

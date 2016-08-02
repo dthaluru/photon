@@ -11,7 +11,7 @@ import json
 import collections
 
 class PackageUtils(object):
-    
+
     def __init__(self,logName=None,logPath=None):
         if logName is None:
             self.logName = "PackageUtils"
@@ -24,7 +24,7 @@ class PackageUtils(object):
         self.rpmBinary = "rpm"
         self.installRPMPackageOptions = "-Uvh"
         self.nodepsRPMPackageOptions = "--nodeps"
-        
+
         self.rpmbuildBinary = "rpmbuild"
         self.rpmbuildBuildallOption = "-ba --clean"
         self.rpmbuildBuildNum = '--define \\\"photon_build_number %s\\\"' % constants.buildNumber
@@ -38,7 +38,7 @@ class PackageUtils(object):
         self.packagesToInstallInAOneShot=""
         self.noDepsRPMFilesToInstallInAOneShot=""
         self.noDepsPackagesToInstallInAOneShot=""
-    
+
     def getRPMArch(self,rpmName):
         arch=""
         if rpmName.find("x86_64") != -1:
@@ -51,7 +51,7 @@ class PackageUtils(object):
         arch = self.getRPMArch(rpmName)
         rpmDestDir=rpmDir+"/"+arch
         return rpmDestDir
-    
+
     def copyRPM(self,rpmFile,destDir):
         cmdUtils = CommandUtils()
         rpmName=os.path.basename(rpmFile)
@@ -62,11 +62,11 @@ class PackageUtils(object):
                 cmdUtils.runCommandInShell("mkdir -p "+rpmDestDir)
             shutil.copyfile(rpmFile,  rpmDestPath)
         return rpmDestPath
-    
+
     def installRPM(self,package,chrootID,noDeps=False,destLogPath=None):
 #        self.logger.info("Installing rpm for package:"+package)
 #        self.logger.debug("No deps:"+str(noDeps))
-        
+
         rpmfile=self.findRPMFileForGivenPackage(package)
         if rpmfile is None:
             self.logger.error("No rpm file found for package:"+package)
@@ -80,7 +80,7 @@ class PackageUtils(object):
         else:
             self.rpmFilesToInstallInAOneShot += " " + rpmFile
             self.packagesToInstallInAOneShot += " " + package
- 
+
     def installRPMSInAOneShot(self,chrootID,destLogPath):
         chrootCmd=self.runInChrootCommand+" "+chrootID
         rpmInstallcmd=self.rpmBinary+" "+ self.installRPMPackageOptions
@@ -106,8 +106,8 @@ class PackageUtils(object):
             if not returnVal:
                 self.logger.error("Unable to install rpms")
                 raise Exception("RPM installation failed")
-        
-    
+
+
     def copySourcesTobuildroot(self,listSourceFiles,package,destDir):
         cmdUtils = CommandUtils()
         for source in listSourceFiles:
@@ -135,7 +135,7 @@ class PackageUtils(object):
                 raise Exception("Multiple sources found")
             self.logger.info("Copying... Source path :" + source + " Source filename: " + sourcePath[0])
             shutil.copy2(sourcePath[0], destDir)
-    
+
     def copyAdditionalBuildFiles(self,listAdditionalFiles,chrootID):
         cmdUtils = CommandUtils()
         for additionalFile in listAdditionalFiles:
@@ -146,7 +146,7 @@ class PackageUtils(object):
                     shutil.copy(source, destDir)
                 else:
                     shutil.copytree(source, destDir)
-        
+
     def buildRPMSForGivenPackage(self,package,chrootID,listBuildOptionPackages,pkgBuildOptionFile,destLogPath=None):
         self.logger.info("Building rpm's for package:"+package)
 
@@ -154,13 +154,13 @@ class PackageUtils(object):
         listPatchFiles =  constants.specData.getPatches(package)
         specFile = constants.specData.getSpecFile(package)
         specName = constants.specData.getSpecName(package) + ".spec"
-        
+
         chrootSourcePath=chrootID+constants.topDirPath+"/SOURCES/"
         chrootSpecPath=constants.topDirPath+"/SPECS/"
         chrootLogsFilePath=chrootID+constants.topDirPath+"/LOGS/"+package+".log"
         chrootCmd=self.runInChrootCommand+" "+chrootID
         shutil.copyfile(specFile, chrootID+chrootSpecPath+specName )
-        
+
 # FIXME: some sources are located in SPECS/.. how to mount?
 #        if os.geteuid()==0:
         self.copySourcesTobuildroot(listSourcesFiles,package,chrootSourcePath)
@@ -182,7 +182,7 @@ class PackageUtils(object):
                     macrolist = pkg[1]["macros"]
                     for macro in macrolist:
                         macros.append(str(macro.encode('utf-8')))
-            
+
             self.copyAdditionalBuildFiles(listAdditionalFiles,chrootID)
 
         #Adding rpm macros
@@ -202,19 +202,19 @@ class PackageUtils(object):
                 shutil.copy2(chrootLogsFilePath, destLogPath)
         self.logger.info("RPM build is successful")
         arch = self.getRPMArch(listRPMFiles[0])
-       
+
         for rpmFile in listRPMFiles:
             self.copyRPM(chrootID+"/"+rpmFile, constants.rpmPath)
-        
+
         for srpmFile in listSRPMFiles:
             self.copyRPM(chrootID+"/"+srpmFile, constants.sourceRpmPath)
             srpmName = os.path.basename(srpmFile)
             package,version,release = self.findPackageInfoFromSourceRPMFile(srpmFile)
             SourcePackageInfo.addSRPMData(package,version,release,arch,srpmName)
 
-    
+
     def buildRPM(self,specFile,logFile,chrootCmd,package,macros):
-        
+
         rpmBuildcmd= self.rpmbuildBinary+" "+self.rpmbuildBuildallOption+" "+self.rpmbuildDistOption
         if not constants.rpmCheck:
             rpmBuildcmd+=" "+self.rpmbuildNocheckOption
@@ -222,7 +222,7 @@ class PackageUtils(object):
             rpmBuildcmd+=' --define \\\"%s\\\"' % macro
         rpmBuildcmd+=" "+self.rpmbuildBuildNum+" "+self.rpmbuildReleaseVer
         rpmBuildcmd+=" "+specFile
-        
+
         cmdUtils = CommandUtils()
         self.logger.info("Building rpm....")
         self.logger.info(rpmBuildcmd)
@@ -230,7 +230,7 @@ class PackageUtils(object):
         if not returnVal:
             self.logger.error("Building rpm is failed "+specFile)
             raise Exception("RPM Build failed")
-        
+
         #Extracting rpms created from log file
         logfile=open(logFile,'r')
         fileContents=logfile.readlines()
@@ -245,7 +245,7 @@ class PackageUtils(object):
                 if (len(listcontents) == 2) and listcontents[1].strip()[-8:] == ".src.rpm" and listcontents[1].find("/SRPMS/") != -1:
                     listSRPMFiles.append(listcontents[1])
         return listRPMFiles,listSRPMFiles    
-    
+
     def findRPMFileForGivenPackage(self,package):
         cmdUtils = CommandUtils()
         version = constants.specData.getVersion(package)
@@ -262,7 +262,7 @@ class PackageUtils(object):
         if len(listFoundRPMFiles) > 1 :
             self.logger.error("Found multiple rpm files for given package in rpm directory.Unable to determine the rpm file for package:"+package)
             raise Exception("Multiple rpm files found")
-    
+
     def findPackageNameFromRPMFile(self,rpmfile):
         rpmfile=os.path.basename(rpmfile)
         releaseindex=rpmfile.rfind("-")
@@ -308,7 +308,7 @@ class PackageUtils(object):
         version=sourcerpmfile[versionindex+1:releaseindex]
         release=sourcerpmfile[releaseindex+1:]
         return packageName,version,release
- 
+
     def findInstalledRPMPackages(self, chrootID):
         cmd = self.rpmBinary+" "+self.queryRpmPackageOptions
         chrootCmd=self.runInChrootCommand+" "+chrootID

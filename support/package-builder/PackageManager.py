@@ -9,7 +9,7 @@ from Scheduler import Scheduler
 from ThreadPool import ThreadPool
 
 class PackageManager(object):
-    
+
     def __init__(self,logName=None,logPath=None):
         if logName is None:
             logName = "PackageManager"
@@ -28,7 +28,7 @@ class PackageManager(object):
         self.listAvailableCyclicPackages=[]
         self.listBuildOptionPackages=[]
         self.pkgBuildOptionFile="" 
-        
+
     def readPackageBuildData(self, listPackages):
         try:
             pkgBuildDataGen = PackageBuildDataGenerator(self.logName,self.logPath)
@@ -37,7 +37,7 @@ class PackageManager(object):
             self.logger.error("unable to get sorted list")
             return False
         return True
-    
+
     def readAlreadyAvailablePackages(self):
         listAvailablePackages=[]
         listRPMFiles=[]
@@ -45,7 +45,7 @@ class PackageManager(object):
         listDirectorys.append(constants.rpmPath)
         if constants.inputRPMSPath is not None:
             listDirectorys.append(constants.inputRPMSPath)
-        
+
         while len(listDirectorys) > 0:
             dirPath=listDirectorys.pop()
             for dirEntry in os.listdir(dirPath):
@@ -74,7 +74,7 @@ class PackageManager(object):
         self.mapCyclesToPackageList.clear()
         self.mapPackageToCycle.clear()
         self.sortedPackageList=[]
-        
+
         listOfPackagesAlreadyBuilt = []
         listOfPackagesAlreadyBuilt = self.readAlreadyAvailablePackages()
         self.listOfPackagesAlreadyBuilt = listOfPackagesAlreadyBuilt[:]
@@ -86,16 +86,16 @@ class PackageManager(object):
                     needToRebuild = True
             if needToRebuild:
                 self.listOfPackagesAlreadyBuilt.remove(pkg)
- 
+
         listPackagesToBuild=listPackages[:]
         for pkg in listPackages:
             if pkg in self.listOfPackagesAlreadyBuilt:
                 listPackagesToBuild.remove(pkg)
-        
+
         if not self.readPackageBuildData(listPackagesToBuild):
             return False
         return True
-    
+
     def buildToolChain(self):
         try:
             tUtils=ToolChainUtils()
@@ -104,17 +104,17 @@ class PackageManager(object):
             self.logger.error("Unable to build tool chain")
             self.logger.error(e)
             raise e
-    
+
     def buildToolChainPackages(self, listBuildOptionPackages, pkgBuildOptionFile, buildThreads):
         self.buildToolChain()
         self.buildGivenPackages(constants.listToolChainPackages, buildThreads)
-        
+
     def buildPackages(self,listPackages, listBuildOptionPackages, pkgBuildOptionFile, buildThreads):
         self.listBuildOptionPackages = listBuildOptionPackages
         self.pkgBuildOptionFile = pkgBuildOptionFile
         self.buildToolChainPackages(listBuildOptionPackages, pkgBuildOptionFile, buildThreads)
         self.buildGivenPackages(listPackages, buildThreads)
-    
+
     def initializeThreadPool(self,statusEvent):
         ThreadPool.clear()
         ThreadPool.mapPackageToCycle=self.mapPackageToCycle
@@ -123,57 +123,57 @@ class PackageManager(object):
         ThreadPool.pkgBuildOptionFile=self.pkgBuildOptionFile
         ThreadPool.logger=self.logger
         ThreadPool.statusEvent=statusEvent
-        
+
     def initializeScheduler(self,statusEvent):
         Scheduler.setLog(self.logName, self.logPath)
         Scheduler.setParams(self.sortedPackageList, self.listOfPackagesAlreadyBuilt)
         Scheduler.setEvent(statusEvent)
         Scheduler.stopScheduling=False
-    
+
     def buildGivenPackages (self, listPackages, buildThreads):
         returnVal=self.calculateParams(listPackages)
         if not returnVal:
             self.logger.error("Unable to set paramaters. Terminating the package manager.")
             raise Exception("Unable to set paramaters")
-        
+
         statusEvent=threading.Event()
         self.initializeScheduler(statusEvent)
         self.initializeThreadPool(statusEvent)
-        
+
         i=0
         while i < buildThreads:
             workerName="WorkerThread"+str(i)
             ThreadPool.addWorkerThread(workerName)
             ThreadPool.startWorkerThread(workerName)
             i = i + 1
-        
+
         statusEvent.wait()
         Scheduler.stopScheduling=True
         self.logger.info("Waiting for all remaining worker threads")
         listWorkerObjs=ThreadPool.getAllWorkerObjects()
         for w in listWorkerObjs:
             w.join()
-            
+
         setFailFlag=False
         allPackagesBuilt=False
-        
+
         if Scheduler.isAnyPackagesFailedToBuild():
             setFailFlag=True
-        
+
         if Scheduler.isAllPackagesBuilt():
             allPackagesBuilt=True
-        
+
         if setFailFlag:
             self.logger.error("Some of the packages failed:")
             self.logger.error(Scheduler.listOfFailedPackages)
             raise Exception("Failed during building package")
-        
+
         if not setFailFlag:
             if allPackagesBuilt:
                 self.logger.info("All packages built successfully")
             else:
                 self.logger.error("Build stopped unexpectedly.Unknown error.")
                 raise Exception("Unknown error")
-        
+
         self.logger.info("Terminated")
 

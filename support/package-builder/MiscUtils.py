@@ -1,7 +1,7 @@
 import os.path
 
 class MiscUtils(object):
-    
+
     @staticmethod
     def isOutdated(listInputFiles,listOutputFiles):
         thresholdTimeStamp=None
@@ -20,7 +20,7 @@ class MiscUtils(object):
             if t > thresholdTimeStamp:
                 return True
         return False
-    
+
     @staticmethod
     def getListSpecFiles(listSpecFiles,path):
         for dirEntry in os.listdir(path):
@@ -29,7 +29,7 @@ class MiscUtils(object):
                 listSpecFiles.append(dirEntryPath)
             elif os.path.isdir(dirEntryPath):
                 MiscUtils.getListSpecFiles(listSpecFiles,dirEntryPath)
-    
+
 if __name__=="__main__":
     listInputFiles=["SpecParser.py","Logger.py"]
     listOutputFiles=["builder.py"]

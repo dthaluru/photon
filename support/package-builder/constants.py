@@ -271,7 +271,7 @@ class constants(object):
         constants.inputRPMSPath=options.inputRPMSPath
         constants.rpmCheck = options.rpmCheck
         constants.updateRPMMacros()
-        
+
     @staticmethod
     def updateRPMMacros():
         #adding distribution rpm macro
@@ -284,7 +284,7 @@ class constants(object):
         #adding kernelrelease rpm macro
         kernelrelease = constants.specData.getRelease("linux")
         constants.specData.addMacro("KERNEL_RELEASE",kernelrelease)
-        
+
         #adding kernelsubrelease rpm macro
         kernelversion = kernelversion.replace(".","")
         if kernelversion.isdigit():

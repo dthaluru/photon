@@ -4,7 +4,7 @@ from constants import constants
 import os.path
 
 class ChrootUtils(object):
-    
+
     def __init__(self,logName=None,logPath=None):
         if logName is None:
             logName = "ChrootUtils"
@@ -13,7 +13,7 @@ class ChrootUtils(object):
         self.logName=logName
         self.logPath=logPath
         self.logger=Logger.getLogger(logName,logPath)
-        
+
     def createChroot(self,chrootName):
         chrootID=constants.buildRootPath+"/"+chrootName
         if os.path.isdir(chrootID):
@@ -28,7 +28,7 @@ class ChrootUtils(object):
             self.logger.error("Unable to create chroot:"+ chrootID +".Unknown error.")
             return False,None
         return True,chrootID
-    
+
     def destroyChroot(self,chrootID):
         # need to add timeout for this step
         # http://stackoverflow.com/questions/1191374/subprocess-with-timeout
@@ -37,11 +37,11 @@ class ChrootUtils(object):
         if not returnVal:
             self.logger.error("Unable to destroy chroot:"+ chrootID +".Unknown error.")
             return False
-        
+
         returnVal=cmdUtils.runCommandInShell("rm -rf "+chrootID)
         if not returnVal:
             self.logger.error("Unable to destroy chroot:"+ chrootID +".Unknown error.")
             return False
         self.logger.info("Successfully destroyed chroot:"+chrootID)
         return True
-    
+

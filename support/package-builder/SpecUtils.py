@@ -3,19 +3,19 @@ from StringUtils import StringUtils
 import os
 
 class Specutils(object):
-    
+
     def __init__(self,specfile):
         self.specfile=""
         self.spec = SpecParser()
         if self.isSpecFile(specfile):
             self.specfile=specfile
             self.spec.parseSpecFile(self.specfile)
-    
+
     def isSpecFile(self,specfile):
         if os.path.isfile(specfile) and specfile[-5:] == ".spec":
             return True
         return False
-    
+
     def getSourceNames(self):
         sourceNames=[]
         strUtils = StringUtils()
@@ -26,7 +26,7 @@ class Specutils(object):
             sourceName=strUtils.getFileNameFromURL(source)
             sourceNames.append(sourceName)
         return sourceNames
-    
+
     def getChecksums(self):
         pkg = self.spec.packages.get('default')
         return pkg.checksums
@@ -34,7 +34,7 @@ class Specutils(object):
     def getChecksumForSource(self,source):
         pkg = self.spec.packages.get('default')
         return pkg.checksums.get(source)
-    
+
     def getSourceURLs(self):
         sourceNames=[]
         strUtils = StringUtils()
@@ -55,14 +55,14 @@ class Specutils(object):
             patchName=strUtils.getFileNameFromURL(patch)
             patchNames.append(patchName)
         return patchNames
-    
+
     def getPackageNames(self):
         packageNames=[]
         for key in self.spec.packages.keys():
             pkg = self.spec.packages.get(key)
             packageNames.append(pkg.name)
         return packageNames
-    
+
     def getIsRPMPackage(self,pkgName):
         defaultPkgName=self.spec.packages['default'].name
         if pkgName == defaultPkgName:
@@ -134,7 +134,7 @@ class Specutils(object):
                 buildArch=pkg.buildarch
                 break
         return buildArch
-    
+
     def getRequiresAllPackages(self):
         depedentPackages=[]
         for key in self.spec.packages.keys():
@@ -147,7 +147,7 @@ class Specutils(object):
             if pkgName in depedentPackages:
                 depedentPackages.remove(pkgName)
         return depedentPackages
-    
+
     def getBuildRequiresAllPackages(self):
         depedentPackages=[]
         for key in self.spec.packages.keys():
@@ -160,8 +160,8 @@ class Specutils(object):
             if pkgName in depedentPackages:
                 depedentPackages.remove(pkgName)
         return depedentPackages
-    
-    
+
+
     def getRequires(self,pkgName):
         dependentPackages=[]
         for key in self.spec.packages.keys():
@@ -179,7 +179,7 @@ class Specutils(object):
                 for dpkg in pkg.buildrequires:
                     dependentPackages.append(dpkg.package)
         return dependentPackages
-        
+
     def getProvides(self,packageName):
         depedentPackages=[]
         defaultPkgName=self.spec.packages['default'].name
@@ -194,19 +194,19 @@ class Specutils(object):
         else:
             print "package not found"
         return depedentPackages
-    
+
     def getVersion(self):
         pkg = self.spec.packages.get('default')
         return pkg.version
-    
+
     def getRelease(self):
         pkg = self.spec.packages.get('default')
         return pkg.release
-    
+
     def getBasePackageName(self):
         pkg = self.spec.packages.get('default')
         return pkg.name
-        
+
     def getSecurityHardeningOption(self):
         return self.spec.globalSecurityHardening
 
@@ -218,11 +218,11 @@ def main():
     print "patches",spec.getPatchNames()  
     print "requires",spec.getRequires('libltdl-devel')
     print "requires",spec.getRequires('libtool')
-    
+
     print "provides",spec.getProvides('libtool')  
     print "all-requires",spec.getRequiresAllPackages()
     print "all-build-requires",spec.getBuildRequiresAllPackages()
-    
+
 if __name__ == '__main__':
     main()
-    
+

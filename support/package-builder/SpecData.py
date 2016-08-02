@@ -20,13 +20,13 @@ class SerializableSpecObject(object):
         self.securityHardening=""
 
 class SerializableSpecObjectsUtils(object):
-    
+
     def __init__(self,logPath):
         self.mapSerializableSpecObjects={}
         self.mapPackageToSpec={}
         self.logger=Logger.getLogger("Serializable Spec objects", logPath )
         self.userDefinedMacros={}
-    
+
     def readSpecsAndConvertToSerializableObjects(self,specFilesPath):
         listSpecFiles=[]
         self.getListSpecFiles(listSpecFiles,specFilesPath)
@@ -58,7 +58,7 @@ class SerializableSpecObjectsUtils(object):
                     specObj.listRPMPackages.append(specPkg)
 	    if skipUpdating == False:
                 self.mapSerializableSpecObjects[specName]=specObj
-    
+
     def getListSpecFiles(self,listSpecFiles,path):
         for dirEntry in os.listdir(path):
             dirEntryPath = os.path.join(path, dirEntry)
@@ -66,15 +66,15 @@ class SerializableSpecObjectsUtils(object):
                 listSpecFiles.append(dirEntryPath)
             elif os.path.isdir(dirEntryPath):
                 self.getListSpecFiles(listSpecFiles,dirEntryPath)
-    
+
     def getBuildRequiresForPackage(self, package):
         specName=self.getSpecName(package)
         return self.mapSerializableSpecObjects[specName].buildRequirePackages
-        
+
     def getRequiresAllForPackage(self, package):
         specName=self.getSpecName(package)
         return self.mapSerializableSpecObjects[specName].installRequiresAllPackages
-        
+
     def getRequiresForPackage(self, package):
         specName=self.getSpecName(package)
         if self.mapSerializableSpecObjects[specName].installRequiresPackages.has_key(package):
@@ -109,15 +109,15 @@ class SerializableSpecObjectsUtils(object):
     def getRelease(self, package):
         specName=self.getSpecName(package)
         return self.processData(self.mapSerializableSpecObjects[specName].release)
-        
+
     def getVersion(self, package):
         specName=self.getSpecName(package)
         return self.mapSerializableSpecObjects[specName].version
-        
+
     def getSpecFile(self, package):
         specName=self.getSpecName(package)
         return self.mapSerializableSpecObjects[specName].specFile
-        
+
     def getPatches(self, package):
         specName=self.getSpecName(package)
         return self.mapSerializableSpecObjects[specName].listPatches
@@ -125,7 +125,7 @@ class SerializableSpecObjectsUtils(object):
     def getSources(self, package):
         specName=self.getSpecName(package)
         return self.mapSerializableSpecObjects[specName].listSources
-        
+
     def getSHA1(self, package, source):
         specName=self.getSpecName(package)
         return self.mapSerializableSpecObjects[specName].checksums.get(source)
@@ -163,14 +163,14 @@ class SerializableSpecObjectsUtils(object):
                 return specName
         self.logger.error("Could not able to find "+package+" package from specs")
         raise Exception("Invalid package:"+package)
-    
+
     def isRPMPackage(self,package):
         if self.mapPackageToSpec.has_key(package):
             specName=self.mapPackageToSpec[package]
             if self.mapSerializableSpecObjects.has_key(specName):
                 return True
         return False
-    
+
     def getSecurityHardeningOption(self, package):
         specName=self.getSpecName(package)
         return self.mapSerializableSpecObjects[specName].securityHardening

@@ -2,9 +2,9 @@ from PackageBuilder import PackageBuilder
 import threading
 import Scheduler
 import ThreadPool
- 
+
 class WorkerThread(threading.Thread):
-    
+
     def __init__(self,event,name,mapPackageToCycle,listAvailableCyclicPackages,logger,listBuildOptionPackages,pkgBuildOptionFile):
         threading.Thread.__init__(self)
         self.statusEvent=event
@@ -14,7 +14,7 @@ class WorkerThread(threading.Thread):
         self.logger=logger
         self.listBuildOptionPackages=listBuildOptionPackages
         self.pkgBuildOptionFile=pkgBuildOptionFile
-        
+
     def run(self):
         buildThreadFailed=False
         ThreadPool.ThreadPool.makeWorkerThreadActive(self.name)
@@ -40,17 +40,17 @@ class WorkerThread(threading.Thread):
                 Scheduler.Scheduler.notifyPackageBuildFailed(pkg)
                 self.logger.info("Thread "+self.name +" stopped building the "+pkg +" package")
                 break
-            
+
             Scheduler.Scheduler.notifyPackageBuildCompleted(pkg)
-        
+
         if buildThreadFailed:
             self.statusEvent.set()
-        
+
         ThreadPool.ThreadPool.makeWorkerThreadInActive(self.name)
         self.logger.info("Thread "+self.name +" is going to rest")
-        
 
 
-                    
-                
-        
+
+
+
+

@@ -27,7 +27,7 @@ class CommandUtils(object):
         if retval==0:
             return True
         return False
-    
+
     def runCommandInShell2(self,cmd,chrootCmd=None):
         if chrootCmd is not None:
             cmd = chrootCmd+" "+cmd
