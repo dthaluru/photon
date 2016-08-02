@@ -10,9 +10,9 @@ Distribution:	Photon
 Source0:	http://www.nasm.us/pub/nasm/releasebuilds/%{version}/%{name}-%{version}.tar.gz
 %define sha1 nasm=6d23d4be63f3a73d7df3053e65168f7906dd99e7
 %description
-NASM (Netwide Assembler) is an 80x86 assembler designed for portability and modularity. It includes a disassembler as well. 
+NASM (Netwide Assembler) is an 80x86 assembler designed for portability and modularity. It includes a disassembler as well.
 %prep
-%setup -q 
+%setup -q
 %build
 ./configure --prefix=%{_prefix}
 make %{?_smp_mflags}

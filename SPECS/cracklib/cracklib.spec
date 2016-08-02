@@ -22,9 +22,9 @@ BuildRequires: python2-devel
 CrackLib tests passwords to determine whether they match certain
 security-oriented characteristics. You can use CrackLib to stop
 users from choosing passwords which would be easy to guess. CrackLib
-performs certain tests: 
+performs certain tests:
 
-* It tries to generate words from a username and gecos entry and 
+* It tries to generate words from a username and gecos entry and
   checks those words against the password;
 * It checks for simplistic patterns in passwords;
 * It checks for the password in a dictionary.
@@ -115,7 +115,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %post -p /sbin/ldconfig
 
-%postun -p /sbin/ldconfig 
+%postun -p /sbin/ldconfig
 
 %files
 %defattr(-,root,root)

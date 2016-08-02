@@ -1,9 +1,9 @@
 %global __requires_exclude perl\\(.*\\)
-Summary:	Net-SNMP is a suite of applications used to implement SNMP v1, SNMP v2c and SNMP v3 using both IPv4 and IPv6. 
-Name:		net-snmp   
+Summary:	Net-SNMP is a suite of applications used to implement SNMP v1, SNMP v2c and SNMP v3 using both IPv4 and IPv6.
+Name:		net-snmp
 Version:	5.7.3
 Release:	4%{?dist}
-License:	BSD (like)  
+License:	BSD (like)
 URL:		http://net-snmp.sourceforge.net/
 Group:		Productivity/Networking/Other
 Vendor:		VMware, Inc.
@@ -100,7 +100,7 @@ rm -rf %{buildroot}/*
 /lib/systemd/system/snmptrapd.service
 %{_bindir}
 %{_libdir}/*.so.*
-/sbin/*  
+/sbin/*
 
 %files devel
 %defattr(-,root,root)

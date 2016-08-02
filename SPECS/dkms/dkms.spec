@@ -58,7 +58,7 @@ echo "disable dkms.service" > %{buildroot}/usr/lib/systemd/system-preset/50-dkms
 
 %changelog
 *   Thu May 26 2016 Divya Thaluru <dthaluru@vmware.com>  2.2.0.3-4
--   Fixed logic to restart the active services after upgrade 
+-   Fixed logic to restart the active services after upgrade
 *	Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 2.2.0.3-3
 -	GA - Bump release of all rpms
 *	Tue Aug 25 2015 Alexey Makhalov <amakhalov@vmware.com> 2.2.0.3-2

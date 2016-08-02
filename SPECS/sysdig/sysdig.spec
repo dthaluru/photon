@@ -3,14 +3,14 @@ Summary:	Sysdig is a universal system visibility tool with native support for co
 Name:		sysdig
 Version:	0.10.1
 Release:	2%{?kernelsubrelease}{?dist}
-License:	GPLv2	  
+License:	GPLv2
 URL:		http://www.sysdig.org/
-Group:		Applications/System	
+Group:		Applications/System
 Vendor:		VMware, Inc.
 Distribution:	Photon
 Source0:	https://github.com/draios/sysdig/archive/%{name}-%{version}.tar.gz
 %define sha1 sysdig=272b95ad02be4d194bba66d360ff935084d9c842
-BuildRequires:	cmake 
+BuildRequires:	cmake
 BuildRequires:  linux-dev = %{KERNEL_VERSION}-%{KERNEL_RELEASE}
 BuildRequires:	openssl-devel
 BuildRequires:	curl
@@ -39,7 +39,7 @@ cmake \
 	-DUSE_BUNDLED_ZLIB=OFF \
 	-DUSE_BUNDLED_NCURSES=OFF ..
 
-make KERNELDIR="/lib/modules/%{KERNEL_VERSION}/build" 
+make KERNELDIR="/lib/modules/%{KERNEL_VERSION}/build"
 
 %install
 cd build
@@ -62,9 +62,9 @@ rm -rf %{buildroot}/*
 
 %files
 %defattr(-,root,root)
-/etc/bash_completion.d/* 
+/etc/bash_completion.d/*
 %{_bindir}
-/usr/src 
+/usr/src
 %{_datadir}
 /lib/modules/%{KERNEL_VERSION}/extra/sysdig-probe.ko
 
@@ -72,7 +72,7 @@ rm -rf %{buildroot}/*
 *   Mon Aug 1 2016 Divya Thaluru <dthaluru@vmware.com> 0.10.1-2
 -   Added kernel macros
 *	Thu Jul 14 2016 Harish Udaiya Kumar <hudaiyakumar@vmware.com> 0.10.1-2
--	Updated sysdig to build the kernel module 
+-	Updated sysdig to build the kernel module
 *       Tue Jun 28 2016 Anish Swaminathan <anishs@vmware.com> 0.10.1-1
 -       Upgrade sysdig to 0.10.1
 *	Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 0.8.0-4

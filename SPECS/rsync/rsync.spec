@@ -1,4 +1,4 @@
-Summary:	Fast incremental file transfer. 
+Summary:	Fast incremental file transfer.
 Name:		rsync
 Version:	3.1.2
 Release:	2%{?dist}
@@ -21,7 +21,7 @@ make %{?_smp_mflags}
 
 %install
 make DESTDIR=%{buildroot} install
-mkdir -p %{buildroot}/%{_sysconfdir} 
+mkdir -p %{buildroot}/%{_sysconfdir}
 touch %{buildroot}/%{_sysconfdir}/rsyncd.conf
 
 mkdir -p %{buildroot}/%{_libdir}/systemd/system

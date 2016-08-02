@@ -244,7 +244,7 @@ class PackageUtils(object):
                     listRPMFiles.append(listcontents[1])
                 if (len(listcontents) == 2) and listcontents[1].strip()[-8:] == ".src.rpm" and listcontents[1].find("/SRPMS/") != -1:
                     listSRPMFiles.append(listcontents[1])
-        return listRPMFiles,listSRPMFiles    
+        return listRPMFiles,listSRPMFiles
 
     def findRPMFileForGivenPackage(self,package):
         cmdUtils = CommandUtils()
@@ -254,7 +254,7 @@ class PackageUtils(object):
                             cmdUtils.findFile(package+"-"+version+"-"+release+".noarch.rpm",constants.rpmPath)], [])
         if constants.inputRPMSPath is not None:
             listFoundRPMFiles = sum([cmdUtils.findFile(package+"-"+version+"-"+release+".x86_64.rpm",constants.inputRPMSPath),
-                            cmdUtils.findFile(package+"-"+version+"-"+release+".noarch.rpm",constants.inputRPMSPath)], listFoundRPMFiles)    
+                            cmdUtils.findFile(package+"-"+version+"-"+release+".noarch.rpm",constants.inputRPMSPath)], listFoundRPMFiles)
         if len(listFoundRPMFiles) == 1 :
             return listFoundRPMFiles[0]
         if len(listFoundRPMFiles) == 0 :
@@ -274,7 +274,7 @@ class PackageUtils(object):
             self.logger.error("Invalid rpm file:"+rpmfile)
             raise Exception("Invalid RPM")
         packageName=rpmfile[0:versionindex]
-        return packageName 
+        return packageName
 
     def findPackageInfoFromRPMFile(self,rpmfile):
         rpmfile=os.path.basename(rpmfile)

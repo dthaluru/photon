@@ -17,7 +17,7 @@ and other tools for handling object files.
 Summary:	Header and development files for binutils
 Requires:	%{name} = %{version}
 %description	devel
-It contains the libraries and header files to create applications 
+It contains the libraries and header files to create applications
 for handling compiled objects.
 %prep
 %setup -q

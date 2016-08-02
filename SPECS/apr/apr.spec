@@ -16,7 +16,7 @@ The Apache Portable Runtime.
 Summary:	Header and development files
 Requires:	%{name} = %{version}
 %description	devel
-It contains the libraries and header files to create applications 
+It contains the libraries and header files to create applications
 
 %prep
 %setup -q
@@ -56,7 +56,7 @@ make DESTDIR=%{buildroot} install
 *	Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 1.5.2-6
 -	GA - Bump release of all rpms
 *	Mon Sep 21 2015 Harish Udaiya Kumar<hudaiyakumar@vmware.com> 1.5.2-5
--	Repacked to move the include files in devel package. 
+-	Repacked to move the include files in devel package.
 *   Wed Jul 15 2015 Sarah Choi <sarahc@vmware.com> 1.5.2-4
 -   Use aprver(=1) instead of version for mesos
 *   Mon Jul 13 2015 Alexey Makhalov <amakhalov@vmware.com> 1.5.2-3

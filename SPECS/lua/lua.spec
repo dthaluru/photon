@@ -54,7 +54,7 @@ cat > %{buildroot}%{_libdir}/pkgconfig/lua.pc <<- "EOF"
 	Name: Lua
 	Description: An Extensible Extension Language
 	Version: ${R}
-	Requires: 
+	Requires:
 	Libs: -L${libdir} -llua -lm
 	Cflags: -I${includedir}
 EOF

@@ -31,7 +31,7 @@ BuildRequires:	attr
 Requires:       openssl
 
 %description
-A library providing C and Python (libcURL like) API for downloading 
+A library providing C and Python (libcURL like) API for downloading
 linux repository metadata and packages
 
 %package devel
@@ -59,10 +59,10 @@ cp %{_builddir}/%{librepo_name}-%{version}/build/librepo/librepo.so* %{buildroot
 cp %{_builddir}/%{librepo_name}-%{version}/build/librepo.pc %{buildroot}%{_libdir}/pkgconfig
 cp %{_builddir}/%{librepo_name}-%{version}/librepo/*.h %{buildroot}%{_includedir}/librepo
 
-%post 
+%post
 /sbin/ldconfig
 
-%postun 
+%postun
 /sbin/ldconfig
 
 %files

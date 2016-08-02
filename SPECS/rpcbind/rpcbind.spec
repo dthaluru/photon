@@ -55,7 +55,7 @@ make -k check |& tee %{_specdir}/%{name}-check-log || %{nocheck}
 rpcid=`getent passwd rpc | cut -d: -f 3`
 if [ -n "$rpcid" -a "$rpcid" != "31" ]; then
 	userdel  rpc 2> /dev/null || :
-	groupdel rpc 2> /dev/null || : 
+	groupdel rpc 2> /dev/null || :
 fi
 if [ -z "$rpcid" -o "$rpcid" != "31" ]; then
 	groupadd -g 31 rpc > /dev/null 2>&1

@@ -15,7 +15,7 @@ Requires:	libtirpc
 %description
 Contains programs for generating Makefiles for use with Autoconf.
 %prep
-%setup -q -n %{name}_%{version} 
+%setup -q -n %{name}_%{version}
 tar -xf lsof_4.89_src.tar
 %build
 cd lsof_4.89_src

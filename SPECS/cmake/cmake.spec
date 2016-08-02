@@ -12,8 +12,8 @@ Distribution:	Photon
 BuildRequires:	ncurses-devel
 Requires:	ncurses
 %description
-CMake is an extensible, open-source system that manages the build process in an 
-operating system and in a compiler-independent manner. 
+CMake is an extensible, open-source system that manages the build process in an
+operating system and in a compiler-independent manner.
 %prep
 %setup -q
 %build

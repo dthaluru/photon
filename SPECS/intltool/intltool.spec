@@ -1,4 +1,4 @@
-Summary:	Intltool 
+Summary:	Intltool
 Name:		intltool
 Version:	0.51.0
 Release:	2%{?dist}

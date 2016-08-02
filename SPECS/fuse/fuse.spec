@@ -11,14 +11,14 @@ Source0:        https://github.com/libfuse/libfuse/releases/download/%{name}-%{v
 %define sha1 fuse=bf71181cdc25f65e5757a8a14d352296722de2e3
 %description
 With FUSE it is possible to implement a fully functional filesystem in a
-userspace program. 
+userspace program.
 
 %package	devel
 Summary:	Header and development files
 Group: 		Development/Libraries
 Requires:	%{name} = %{version}
 %description	devel
-It contains the libraries and header files to create fuse applications. 
+It contains the libraries and header files to create fuse applications.
 
 %prep
 %setup -q
@@ -35,7 +35,7 @@ install -v -m755 -d /usr/share/doc/fuse-2.9.5 &&
 install -v -m644    doc/{how-fuse-works,kernel.txt} \
                     /usr/share/doc/fuse-2.9.5
 
-%files 
+%files
 %defattr(-, root, root)
 %{_libdir}/*
 %exclude %{_libdir}/debug/
@@ -44,7 +44,7 @@ install -v -m644    doc/{how-fuse-works,kernel.txt} \
 %{_datadir}/man/*
 
 %files devel
-%doc ChangeLog 
+%doc ChangeLog
 %{_libdir}/*.la
 %{_prefix}/lib/libfuse.so
 %{_prefix}/include/*
@@ -56,7 +56,7 @@ install -v -m644    doc/{how-fuse-works,kernel.txt} \
 *   Tue Jan 26 2016 Xiaolin Li <xiaolinl@vmware.com> 2.9.5-1
 -   Updated to version 2.9.5
 *	Fri Aug 28 2015 Alexey Makhalov <amakhalov@vmware.com> 2.9.4-2
--	post/pre actions are removed. 
+-	post/pre actions are removed.
 *	Tue Jun 16 2015 Harish Udaiya Kumar <hudaiyakumar@vmware.com> 2.9.4-1
--	Initial version. 
+-	Initial version.
 

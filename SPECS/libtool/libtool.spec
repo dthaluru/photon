@@ -10,7 +10,7 @@ Distribution: Photon
 Source0:		http://ftp.gnu.org/gnu/libtool/%{name}-%{version}.tar.xz
 %define sha1 libtool=3e7504b832eb2dd23170c91b6af72e15b56eb94e
 %description
-It wraps the complexity of using shared libraries in a 
+It wraps the complexity of using shared libraries in a
 consistent, portable interface.
 %package -n libltdl
 Summary:       Shared library files for %{name}
@@ -78,4 +78,4 @@ make -k check |& tee %{_specdir}/%{name}-check-log || %{nocheck}
 *	Wed Jan 13 2016 Xiaolin Li <xiaolinl@vmware.com> 2.4.6-1
 -   Updated to version 2.4.6
 *	Wed Nov 5 2014 Divya Thaluru <dthaluru@vmware.com> 2.4.2-1
--	Initial build.	First version	
+-	Initial build.	First version

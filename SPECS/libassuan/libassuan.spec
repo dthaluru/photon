@@ -12,7 +12,7 @@ Source0:	ftp://ftp.gnupg.org/gcrypt/%{name}/%{name}-%{version}.tar.bz2
 Requires:	libgpg-error >= 1.21
 BuildRequires:	libgpg-error >= 1.21
 %description
-The libassuan package contains an inter process communication library used by some of the other GnuPG related packages. libassuan's primary use is to allow a client to interact with a non-persistent server. libassuan is not, however, limited to use with GnuPG servers and clients. It was designed to be flexible enough to meet the demands of many transaction based environments with non-persistent servers. 
+The libassuan package contains an inter process communication library used by some of the other GnuPG related packages. libassuan's primary use is to allow a client to interact with a non-persistent server. libassuan is not, however, limited to use with GnuPG servers and clients. It was designed to be flexible enough to meet the demands of many transaction based environments with non-persistent servers.
 %prep
 %setup -q
 %build
@@ -24,7 +24,7 @@ rm %{buildroot}/%{_libdir}/*.la
 rm -rf %{buildroot}/%{_infodir}
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
-%files 
+%files
 %defattr(-,root,root)
 %{_bindir}/*
 %{_includedir}/*.h

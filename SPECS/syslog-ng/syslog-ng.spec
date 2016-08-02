@@ -121,7 +121,7 @@ rm -rf %{buildroot}/*
 
 %changelog
 *   Thu May 26 2016 Divya Thaluru <dthaluru@vmware.com>  3.6.4-5
--   Fixed logic to restart the active services after upgrade 
+-   Fixed logic to restart the active services after upgrade
 *	Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 3.6.4-4
 -	GA - Bump release of all rpms
 *   	Wed May 4 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com>  3.6.4-3

@@ -23,7 +23,7 @@ Group: Development/Libraries
 Requires: netmgmt = %{version}-%{release}
 
 %description devel
-header files and libraries for netmgmt 
+header files and libraries for netmgmt
 
 %prep
 %setup -q

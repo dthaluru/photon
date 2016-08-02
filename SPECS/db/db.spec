@@ -16,7 +16,7 @@ The Berkeley DB package contains programs and utilities used by many other appli
 Summary:	Header and development files
 Requires:	%{name} = %{version}
 %description	devel
-It contains the libraries and header files to create applications 
+It contains the libraries and header files to create applications
 
 %package docs
 Summary: DB docs
@@ -63,7 +63,7 @@ rm -rf %{buildroot}
 * 	Thu Jan 14 2016 Xiaolin Li <xiaolinl@vmware.com> 6.1.26-1
 - 	Updated to version 6.1.26
 * 	Tue Sep 22 2015 Harish Udaiya Kumar <hudaiyakumar@vmware.com> 5.3.28-2
--	Created devel sub-package. 
+-	Created devel sub-package.
 *	Sun Jan 04 2015 Touseef Liaqat <tliaqat@vmware.com> 6.1.19-1
 -	Created separated docs package. First version
 *	Tue Nov 25 2014 Divya Thaluru <dthaluru@vmware.com> 6.1.19-1

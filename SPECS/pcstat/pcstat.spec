@@ -1,8 +1,8 @@
 Summary:	A tool that inspect which pages of a file or files are being cached by the Linux kernel
-Name:		pcstat 
+Name:		pcstat
 Version:	1
 Release:	2%{?dist}
-License:	Apache 
+License:	Apache
 URL:		https://github.com/tobert/pcstat
 Group:		Development/Debuggers
 Vendor:		VMware, Inc.
@@ -27,7 +27,7 @@ cp -a pcstat %{buildroot}/usr/local/bin
 %clean
 rm -rf %{buildroot}/*
 
-%files 
+%files
 %defattr(-,root,root)
 /usr/local/bin
 

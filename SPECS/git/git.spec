@@ -22,13 +22,13 @@ Requires:	perl-DBI
 Requires:       perl-CGI
 
 %description
-Git is a free and open source, distributed version control system 
+Git is a free and open source, distributed version control system
 designed to handle everything from small to very large projects with
-speed and efficiency. Every Git clone is a full-fledged repository 
-with complete history and full revision tracking capabilities, not 
-dependent on network access or a central server. Branching and 
+speed and efficiency. Every Git clone is a full-fledged repository
+with complete history and full revision tracking capabilities, not
+dependent on network access or a central server. Branching and
 merging are fast and easy to do. Git is used for version control of
-files, much like tools such as Mercurial, Bazaar, 
+files, much like tools such as Mercurial, Bazaar,
 Subversion-1.7.8, CVS-1.11.23, Perforce, and Team Foundation Server.
 
 %package lang
@@ -89,7 +89,7 @@ rm -rf %{buildroot}/*
 
 %changelog
 *   Thu May 26 2016 Harish Udaiya Kumar <hudaiyakumar@vmware.com> 2.8.1-5
--	Excluded the perllocal.pod log. 
+-	Excluded the perllocal.pod log.
 *	Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 2.8.1-4
 -	GA - Bump release of all rpms
 *       Wed May 18 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 2.8.1-3
@@ -97,7 +97,7 @@ rm -rf %{buildroot}/*
 *       Thu May 05 2016 Kumar Kaushik <kaushikk@vmware.com> 2.8.1-2
 -       Handling the upgrade scenario.
 *   	Fri Apr 15 2016 Anish Swaminathan <anishs@vmware.com> 2.8.1-1
--   	Updated to version 2.8.1 
+-   	Updated to version 2.8.1
 *   	Tue Feb 23 2016 Harish Udaiya Kumar <hudaiyakumar@vmware.com> 2.7.1-1
 -   	Updated to version 2.7.1
 *	Wed Jan 13 2016 Anish Swaminathan <anishs@vmware.com> 2.1.2-2

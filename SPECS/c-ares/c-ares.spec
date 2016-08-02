@@ -15,8 +15,8 @@ BuildRequires:  automake
 BuildRequires:  libtool
 
 %description
-c-ares is a C library that performs DNS requests and name resolves 
-asynchronously. c-ares is a fork of the library named 'ares', written 
+c-ares is a C library that performs DNS requests and name resolves
+asynchronously. c-ares is a fork of the library named 'ares', written
 by Greg Hudson at MIT.
 
 %package devel

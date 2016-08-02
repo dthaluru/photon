@@ -15,7 +15,7 @@ BuildRequires:	python2-libs
 Provides:	pkgconfig(libxml-2.0)
 
 %description
-The libxml2 package contains libraries and utilities used for parsing XML files. 
+The libxml2 package contains libraries and utilities used for parsing XML files.
 
 %package python
 Summary:    The libxml2 python module
@@ -92,7 +92,7 @@ rm -rf %{buildroot}/*
 -       Upgraded to version 2.9.3
 *       Thu Jan 28 2016 Xiaolin Li <xiaolinl@vmware.com> 2.9.2-1
 -       Downgrade to version 2.9.2
--       libxml 2.9.3 has been found to have major functional issues. 
+-       libxml 2.9.3 has been found to have major functional issues.
 -       Until these are resolved, please roadmap updating to 2.9.2.
 *       Wed Dec 2 2015 Xiaolin Li <xiaolinl@vmware.com> 2.9.3-1
 -       Update to version 2.9.3

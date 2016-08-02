@@ -13,8 +13,8 @@ Distribution: Photon
 Patch0: cve-2014-9636.patch
 
 %description
-The UnZip package contains ZIP extraction utilities. These are useful 
-for extracting files from ZIP archives. ZIP archives are created 
+The UnZip package contains ZIP extraction utilities. These are useful
+for extracting files from ZIP archives. ZIP archives are created
 with PKZIP or Info-ZIP utilities, primarily in a DOS environment.
 
 %prep

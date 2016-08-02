@@ -23,7 +23,7 @@ make %{?_smp_mflags}
 install -vdm 755 %{buildroot}%{_sbindir}
 make DESTDIR=%{buildroot} install
 make DESTDIR=%{buildroot} -C doc install-html docdir=%{_defaultdocdir}/%{name}-%{version}
-install -vdm 755 %{buildroot}/usr/share/man/man1 
+install -vdm 755 %{buildroot}/usr/share/man/man1
 rm -rf %{buildroot}%{_infodir}
 %find_lang %{name}
 %check

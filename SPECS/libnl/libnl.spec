@@ -37,7 +37,7 @@ make %{?_smp_mflags}
 make DESTDIR=%{buildroot} install
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
-%files 
+%files
 %defattr(-,root,root)
 %{_sysconfdir}/*
 %{_bindir}/*
@@ -59,6 +59,6 @@ make DESTDIR=%{buildroot} install
 * 	Fri Jan 15 2016 Xiaolin Li <xiaolinl@vmware.com> 3.2.27-1
 - 	Updated to version 3.2.27
 *	Tue Sep 22 2015 Harish Udaiya Kumar <hudaiyakumar@vmware.com> 3.2.25-2
--	Updated build-requires after creating devel package for dbus. 
+-	Updated build-requires after creating devel package for dbus.
 *	Tue Jun 23 2015 Divya Thaluru <dthaluru@vmware.com> 3.2.25-1
 -	Initial build.

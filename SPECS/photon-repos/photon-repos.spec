@@ -14,7 +14,7 @@ BuildArch:	noarch
 Requires:       rpm
 
 %description
-Photon repo files and gpg keys 
+Photon repo files and gpg keys
 
 %prep
 %setup -q -n %{name}-%{version}

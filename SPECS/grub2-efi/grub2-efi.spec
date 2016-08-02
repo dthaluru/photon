@@ -43,7 +43,7 @@ These are the additional language files of grub.
     --with-platform=efi \
     --target=x86_64 \
     --with-program-prefix="" \
-    --with-bootdir="/boot" 
+    --with-bootdir="/boot"
 
 make %{?_smp_mflags}
 

@@ -2,7 +2,7 @@ Summary:	Netcat is a featured networking utility which reads and writes data acr
 Name:		netcat
 Version:	0.7.1
 Release:	3%{?dist}
-License:	GPLv2 
+License:	GPLv2
 URL:		http://netcat.sourceforge.net/
 Group:		Productivity/Networking/Other
 Vendor:		VMware, Inc.
@@ -18,7 +18,7 @@ It is designed to be a reliable "back-end" tool that can be used directly or eas
 %setup -q
 %build
 
-./configure --prefix=%{_prefix} 
+./configure --prefix=%{_prefix}
 make %{?_smp_mflags}
 %install
 make DESTDIR=%{buildroot} install
@@ -26,7 +26,7 @@ make DESTDIR=%{buildroot} install
 %clean
 rm -rf %{buildroot}
 
-%files 
+%files
 %defattr(-,root,root)
 %{_bindir}
 /usr/info/

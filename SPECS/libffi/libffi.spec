@@ -12,7 +12,7 @@ Source0:	ftp://sourceware.org/pub/libffi/%{name}-%{version}.tar.gz
 Provides:	pkgconfig(libffi)
 %description
 The libffi library provides a portable, high level programming interface
-to various calling conventions. This allows a programmer to call any 
+to various calling conventions. This allows a programmer to call any
 function specified by a call interface description at run time.
 %prep
 %setup -q

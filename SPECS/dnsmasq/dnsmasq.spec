@@ -18,8 +18,8 @@ Dnsmasq a lightweight, caching DNS proxy with integrated DHCP server.
 %setup -q
 
 %build
-make %{?_smp_mflags} 
-make -C contrib/wrt %{?_smp_mflags} 
+make %{?_smp_mflags}
+make -C contrib/wrt %{?_smp_mflags}
 
 %install
 rm -rf %{buildroot}

@@ -12,7 +12,7 @@ Source0:	ftp://ftp.gnu.org/gnu/%{name}/%{name}-%{version}.tar.xz
 Requires:	openssl
 BuildRequires:	openssl-devel
 %description
-The Wget package contains a utility useful for non-interactive 
+The Wget package contains a utility useful for non-interactive
 downloading of files from the Web.
 %prep
 %setup -q
@@ -26,7 +26,7 @@ downloading of files from the Web.
 	--bindir=%{_bindir} \
 	--libdir=%{_libdir} \
 	--sysconfdir=/etc \
-	--with-ssl=openssl 
+	--with-ssl=openssl
 make %{?_smp_mflags}
 %install
 [ %{buildroot} != "/"] && rm -rf %{buildroot}/*

@@ -67,6 +67,6 @@ chmod -R 755 $DIST_DIR
 *   Mon Nov 16 2015 Sharath George <sharathg@vmware.com> 1.0.15-3
 -   Changing path to /var/opt.
 *   Wed Sep 16 2015 Harish Udaiya Kumar <hudaiyakumar@vmware.com> 1.0.15-2
--   Updated dependencies after repackaging openjdk. 
+-   Updated dependencies after repackaging openjdk.
 *   Wed Jul 15 2015 Sriram Nambakam <snambakam@vmware.com> 1.0.15-1
 -   Initial commit

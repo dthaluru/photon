@@ -1,4 +1,4 @@
-Summary:	SELinux binary policy manipulation library 
+Summary:	SELinux binary policy manipulation library
 Name:		libsepol
 Version:	2.5
 Release:	2%{?dist}
@@ -35,7 +35,7 @@ Provides:	pkgconfig(libsepol)
 
 %description	devel
 The libsepol-devel package contains the libraries and header files
-needed for developing applications that manipulate binary policies. 
+needed for developing applications that manipulate binary policies.
 
 %prep
 %setup -qn %{name}-%{version}-rc1
@@ -46,10 +46,10 @@ make clean
 make %{?_smp_mflags}
 
 %install
-mkdir -p %{buildroot}/%{_lib} 
-mkdir -p %{buildroot}/%{_libdir} 
-mkdir -p %{buildroot}%{_includedir} 
-mkdir -p %{buildroot}%{_bindir} 
+mkdir -p %{buildroot}/%{_lib}
+mkdir -p %{buildroot}/%{_libdir}
+mkdir -p %{buildroot}%{_includedir}
+mkdir -p %{buildroot}%{_bindir}
 mkdir -p %{buildroot}%{_mandir}/man3
 mkdir -p %{buildroot}%{_mandir}/man8
 make DESTDIR="%{buildroot}" LIBDIR="%{buildroot}%{_libdir}" SHLIBDIR="%{buildroot}/%{_lib}" install

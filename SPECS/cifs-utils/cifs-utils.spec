@@ -25,7 +25,7 @@ Requires:   cifs-utils = %{version}-%{release}
 Provides header files needed for Cifs-Utils development.
 
 %prep
-%setup -q 
+%setup -q
 %build
 ./configure --prefix=%{_prefix}
 

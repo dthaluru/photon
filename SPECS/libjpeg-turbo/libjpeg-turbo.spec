@@ -18,10 +18,10 @@ libjpeg-turbo is a fork of the original IJG libjpeg which uses SIMD to accelerat
 Summary:	Header and development files
 Requires:	%{name} = %{version}-%{release}
 %description	devel
-It contains the libraries and header files to create applications 
+It contains the libraries and header files to create applications
 
 %prep
-%setup -q 
+%setup -q
 %build
 ./configure \
 	--prefix=%{_prefix} \

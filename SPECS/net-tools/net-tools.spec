@@ -40,10 +40,10 @@ Patch27:	Bug#747006-inet6_sr.c-buffer-overflows.patch
 Patch28:	Bug#561161-statistics.c-long_numbers.patch
 Patch29:	Bug#508110-inet6.c-initialize_fields.patch
 Patch30:	Ubuntu_unit_conversion.patch
-Obsoletes:	inetutils 
-Requires:	iputils 
+Obsoletes:	inetutils
+Requires:	iputils
 %description
-The Net-tools package is a collection of programs for controlling the network subsystem of the Linux kernel. 
+The Net-tools package is a collection of programs for controlling the network subsystem of the Linux kernel.
 %prep
 %setup -q
 %patch0 -p1

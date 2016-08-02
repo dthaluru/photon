@@ -30,7 +30,7 @@ BuildRequires: libtirpc-devel
 BuildRequires: libxml2-devel
 BuildRequires: perl
 BuildRequires: nss
-%if %with_boost 
+%if %with_boost
 BuildRequires: boost-devel
 %endif
 %if %with_crash
@@ -45,7 +45,7 @@ BuildRequires: rpm-devel
 Requires:      gcc
 Requires:      linux-dev
 Requires:      make
-Requires:	   elfutils 
+Requires:	   elfutils
 Requires:      %{name}-runtime = %{?epoch:%epoch:}%{version}-%{release}
 
 BuildRoot:     %{_tmppath}/%{name}-%{version}-root
@@ -329,18 +329,18 @@ fi
 %{_mandir}/man8/stap-server.8*
 
 %changelog
-* 	Fri Jul 22 2016 Divya Thaluru <dthaluru@vmware.com> 3.0-1 
+* 	Fri Jul 22 2016 Divya Thaluru <dthaluru@vmware.com> 3.0-1
 -	Updated version to 3.0
 -	Removing patch to enable kernel (fix is present in upstream)
 *	Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 2.9-5
 -	GA - Bump release of all rpms
 *   Mon May 23 2016 Harish Udaiya KUmar <hudaiyakumar@vmware.com> 2.9-4
 -	Added the patch to enable kernel building with Kernel 4.4
-* 	Fri May 20 2016 Harish Udaiya Kumar <hudaiyakumar@vmware.com> 2.9-3 
+* 	Fri May 20 2016 Harish Udaiya Kumar <hudaiyakumar@vmware.com> 2.9-3
 -	Fixed the stap-prep script to be compatible with Photon
 *   Wed May 4 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 2.9-2
 -   Fix for upgrade issues
-* 	Wed Dec 16 2015 Harish Udaiya Kumar <hudaiyakumar@vmware.com> 2.9-1 
+* 	Wed Dec 16 2015 Harish Udaiya Kumar <hudaiyakumar@vmware.com> 2.9-1
 -	Updated version to 2.9
 *	Fri Dec 11 2015 Xiaolin Li <xiaolinl@vmware.com> 2.7-2
 -	Move dtrace to the main package.

@@ -9,7 +9,7 @@ Vendor:		VMware, Inc.
 Distribution:	Photon
 Source0:	https://github.com/libgd/libgd/releases/download/gd-2.2.3/%{name}-%{version}.tar.gz
 %define sha1 libgd=8681e4c801e51d62c13384a9334f1bd253ce630d
-BuildRequires:	libjpeg-turbo-devel 
+BuildRequires:	libjpeg-turbo-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libwebp-devel
 BuildRequires:	libtiff-devel
@@ -26,9 +26,9 @@ GD is written in C, and "wrappers" are available for Perl, PHP and other languag
 Summary:	Header and development files
 Requires:	%{name} = %{version}
 %description	devel
-Header & Development files 
+Header & Development files
 %prep
-%setup -q 
+%setup -q
 %build
 ./configure --prefix=%{_prefix} --with-webp --with-tiff --with-jpeg --with-png --disable-werror --disable-static
 make %{?_smp_mflags}

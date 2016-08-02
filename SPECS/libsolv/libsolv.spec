@@ -17,8 +17,8 @@ BuildRequires:	cmake
 BuildRequires:	rpm-devel
 BuildRequires:	expat
 %description
-Libsolv is a free package management library, using SAT technology to solve requests. 
-It supports debian, rpm, archlinux and haiku style distributions. 
+Libsolv is a free package management library, using SAT technology to solve requests.
+It supports debian, rpm, archlinux and haiku style distributions.
 %prep
 %setup -q
 %build
@@ -45,7 +45,7 @@ make -k check |& tee %{_specdir}/%{name}-check-log || %{nocheck}
 *   Fri Jan 22 2016 Xiaolin Li <xiaolinl@vmware.com> 0.6.17-1
 -   Updated to version 0.6.17
 *   Tue Sep 22 2015 Harish Udaiya Kumar <hudaiyakumar@vmware.com> 0.6.6-3
--   Updated build-requires after creating devel package for db. 
+-   Updated build-requires after creating devel package for db.
 *   Wed May 20 2015 Touseef Liaqat <tliaqat@vmware.com> 0.6.6-2
 -   Updated group.
 *	Tue Nov 25 2014 Divya Thaluru <dthaluru@vmware.com> 0.6.6-1

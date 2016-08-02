@@ -27,7 +27,7 @@ class PackageManager(object):
         self.mapThreadsLaunchTime={}
         self.listAvailableCyclicPackages=[]
         self.listBuildOptionPackages=[]
-        self.pkgBuildOptionFile="" 
+        self.pkgBuildOptionFile=""
 
     def readPackageBuildData(self, listPackages):
         try:

@@ -453,7 +453,7 @@
         <pkgref id="util-linux"/>
         <pkgref id="xz"/>
         <pkgref id="zlib"/>
-    </package-group> 
+    </package-group>
     <package-group id="minimal">
         <pkgref id="attr"/>
         <pkgref id="bash"/>

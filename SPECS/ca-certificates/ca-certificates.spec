@@ -1,4 +1,4 @@
-Summary:	Certificate Authority certificates 
+Summary:	Certificate Authority certificates
 Name:		ca-certificates
 Version:	20160109
 Release:	5%{?dist}
@@ -16,7 +16,7 @@ The Public Key Inrastructure is used for many security issues in a
 Linux system. In order for a certificate to be trusted, it must be
 signed by a trusted agent called a Certificate Authority (CA). The
 certificates loaded by this section are from the list on the Mozilla
-version control system and formats it into a form used by 
+version control system and formats it into a form used by
 OpenSSL-1.0.1e. The certificates can also be used by other applications
 either directly of indirectly through openssl.
 %prep -p exit
@@ -219,7 +219,7 @@ install -Dm644 bin/make-ca.sh %{buildroot}/bin/make-ca.sh
 install -Dm644 bin/make-cert.pl %{buildroot}/bin/make-cert.pl
 install -Dm644 bin/remove-expired-certs.sh %{buildroot}/bin/remove-expired-certs.sh
 %{_fixperms} %{buildroot}/*
-%post 
+%post
 cd /etc/ssl/certs;
 for file in *.pem; do ln -sf $file `openssl x509 -hash -noout -in $file`.0; done
 exit 0

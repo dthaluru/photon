@@ -1,4 +1,4 @@
-Summary:	Glib interfaces to D-Bus API 
+Summary:	Glib interfaces to D-Bus API
 Name:		dbus-glib
 Version:	0.106
 Release:	4%{?dist}
@@ -40,7 +40,7 @@ make %{?_smp_mflags}
 make DESTDIR=%{buildroot} install
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
-%files 
+%files
 %defattr(-,root,root)
 %{_sysconfdir}/bash_completion.d/*
 %{_bindir}/*

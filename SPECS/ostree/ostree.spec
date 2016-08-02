@@ -74,7 +74,7 @@ env NOCONFIGURE=1 ./autogen.sh
 	--with-mkinitcpio \
     --enable-libsoup-client-certs  \
 	--prefix=%{_prefix}
-	  
+
 make %{?_smp_mflags}
 
 %install
@@ -127,7 +127,7 @@ rm -rf %{buildroot}
 
 %changelog
 *   Thu May 26 2016 Divya Thaluru <dthaluru@vmware.com>  2015.7-5
--   Fixed logic to restart the active services after upgrade 
+-   Fixed logic to restart the active services after upgrade
 *	Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 2015.7-4
 -	GA - Bump release of all rpms
 *	Wed May 04 2016 Anish Swaminathan <anishs@vmware.com> 2015.7-3

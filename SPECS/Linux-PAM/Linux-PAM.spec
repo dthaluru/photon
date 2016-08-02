@@ -12,7 +12,7 @@ Source0:	http://linux-pam.org/library/%{name}-%{version}.tar.bz2
 BuildRequires:	cracklib-devel
 Requires:	cracklib
 %description
-The Linux PAM package contains Pluggable Authentication Modules used to 
+The Linux PAM package contains Pluggable Authentication Modules used to
 enable the local system administrator to choose how applications authenticate users.
 
 %package lang

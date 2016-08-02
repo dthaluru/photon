@@ -9,17 +9,17 @@ Vendor:		VMware, Inc.
 Distribution: Photon
 Source0:	http://downloads.sourceforge.net/project/gptfdisk/gptfdisk/1.0.1/gptfdisk-1.0.1.tar.gz
 %define sha1 gptfdisk=ad28c511c642235815b83fffddf728c117057cba
-Patch0:	        gptfdisk-1.0.1-convenience-1.patch	
+Patch0:	        gptfdisk-1.0.1-convenience-1.patch
 Requires: 	popt >= 1.16
 BuildRequires:	popt-devel
 BuildRequires:	ncurses-devel
 Requires:	ncurses
 %description
-The gptfdisk package is a set of programs for creation and maintenance of GUID Partition 
-Table (GPT) disk drives. A GPT partitioned disk is required for drives greater than 2 TB 
-and is a modern replacement for legacy PC-BIOS partitioned disk drives that use a 
-Master Boot Record (MBR). The main program, gdisk, has an inteface similar to the 
-classic fdisk program. 
+The gptfdisk package is a set of programs for creation and maintenance of GUID Partition
+Table (GPT) disk drives. A GPT partitioned disk is required for drives greater than 2 TB
+and is a modern replacement for legacy PC-BIOS partitioned disk drives that use a
+Master Boot Record (MBR). The main program, gdisk, has an inteface similar to the
+classic fdisk program.
 %prep
 %setup -q
 %patch0 -p1

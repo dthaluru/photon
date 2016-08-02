@@ -27,7 +27,7 @@ compatibility.
 Summary:	Header and development files for ncurses
 Requires:	%{name} = %{version}
 %description	devel
-It contains the libraries and header files to create applications 
+It contains the libraries and header files to create applications
 %prep
 %setup -q
 %build

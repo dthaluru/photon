@@ -76,7 +76,7 @@ fi
 if [ $1 -eq 0 ]; then
     # Package deletion
     userdel kube
-    groupdel kube 
+    groupdel kube
 fi
 
 %files

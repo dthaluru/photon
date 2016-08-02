@@ -13,7 +13,7 @@ Source1:	nginx.service
 BuildRequires:	openssl-devel
 BuildRequires:  pcre-devel
 %description
-NGINX is a free, open-source, high-performance HTTP server and reverse proxy, as well as an IMAP/POP3 proxy server. 
+NGINX is a free, open-source, high-performance HTTP server and reverse proxy, as well as an IMAP/POP3 proxy server.
 
 %prep
 %setup -q
@@ -28,7 +28,7 @@ NGINX is a free, open-source, high-performance HTTP server and reverse proxy, as
 	--http-log-path=/var/log/nginx/access.log   \
     --with-http_ssl_module \
     --with-pcre \
-    --with-ipv6 
+    --with-ipv6
 
 make %{?_smp_mflags}
 %install

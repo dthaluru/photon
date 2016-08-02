@@ -20,13 +20,13 @@ Requires:       openldap
 %define sha1 sendmail=5801d4b06f4e38ef228a5954a44d17636eaa5a16
 
 %description
-Sendmail is widely used Mail Transport agent which helps in sending 
-email from one system to another. This program helps in movement 
+Sendmail is widely used Mail Transport agent which helps in sending
+email from one system to another. This program helps in movement
 of email from systems to network and is not just a mail client.
 
 %prep
 
-%setup 
+%setup
 
 %build
 
@@ -169,7 +169,7 @@ fi
 
 %changelog
 *       Thu May 26 2016 Divya Thaluru <dthaluru@vmware.com> 8.15.2-6
--       Fixed logic to restart the active services after upgrade 
+-       Fixed logic to restart the active services after upgrade
 *       Wed May 25 2016 Kumar Kaushik <kaushikk@vmware.com> 8.15.2-5
 -       Adding dependencies and fixing post section installation bug.
 *	Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 8.15.2-4

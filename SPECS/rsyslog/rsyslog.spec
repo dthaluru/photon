@@ -73,7 +73,7 @@ make -k check |& tee %{_specdir}/%{name}-check-log || %{nocheck}
 %{_sysconfdir}/systemd/journald.conf.d/*
 %changelog
 *   Thu May 26 2016 Divya Thaluru <dthaluru@vmware.com>  8.15.0-5
--   Fixed logic to restart the active services after upgrade 
+-   Fixed logic to restart the active services after upgrade
 *	Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 8.15.0-4
 -	GA - Bump release of all rpms
 *   	Wed May 4 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com>  8.15.0-3

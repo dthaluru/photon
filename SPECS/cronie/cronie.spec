@@ -118,7 +118,7 @@ make -k check |& tee %{_specdir}/%{name}-check-log || %{nocheck}
 -   	Add systemd to Requires and BuildRequires.
 -   	Use systemctl to enable/disable service.
 *	Mon Nov 30 2015 Xiaolin Li <xiaolinl@vmware.com> 1.5.0-3
--	Symlink cron.service to crond.service. 
+-	Symlink cron.service to crond.service.
 -   	And move the /usr/etc/pam.d/crond to /etc/pam.d/crond
 *	Thu Nov 12 2015 Xiaolin Li <xiaolinl@vmware.com> 1.5.0-2
 -	Add crond to systemd service.

@@ -52,4 +52,4 @@ make -k check |& tee %{_specdir}/%{name}-check-log || %{nocheck}
 *	Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 1.16-2
 -	GA - Bump release of all rpms
 *	Wed Nov 5 2014 Divya Thaluru <dthaluru@vmware.com> 1.16-1
--	Initial build.	First version	
+-	Initial build.	First version

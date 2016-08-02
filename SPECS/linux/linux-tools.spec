@@ -1,4 +1,4 @@
-Summary:      This package contains the 'perf' performance analysis tools for Linux kernel 
+Summary:      This package contains the 'perf' performance analysis tools for Linux kernel
 Name:         linux-tools
 Version:      4.4.8
 Release:      3%{?dist}
@@ -13,7 +13,7 @@ Patch0:		  perf-top-sigsegv-fix.patch
 Requires:         filesystem kmod coreutils binutils
 
 %description
-This package contains the 'perf' performance analysis tools for Linux kernel. 
+This package contains the 'perf' performance analysis tools for Linux kernel.
 
 %prep
 %setup -q -n linux-4.4.8
@@ -22,11 +22,11 @@ This package contains the 'perf' performance analysis tools for Linux kernel.
 %build
 cd tools/perf
 sed -i 's/EXTRA_WARNINGS += -Wnested-externs/#EXTRA_WARNINGS += -Wnested-externs/' ../scripts/Makefile.include
-make 
+make
 
 %install
 cd tools
-make DESTDIR=%{buildroot} prefix=%{_prefix} perf_install 
+make DESTDIR=%{buildroot} prefix=%{_prefix} perf_install
 mv %{buildroot}/usr/lib64 %{buildroot}%{_libdir}
 
 %files
@@ -35,11 +35,11 @@ mv %{buildroot}/usr/lib64 %{buildroot}%{_libdir}
 %exclude %{_libdir}/debug
 %{_libdir}/traceevent
 %{_bindir}
-/etc/bash_completion.d/* 
+/etc/bash_completion.d/*
 
 %changelog
 *	Mon Jun 20 2016 Harish Udaiya Kumar <hudaiyakumar@vmware.com> 4.4.8-3
--	Added patch to fix perf top segmentation fault. 
+-	Added patch to fix perf top segmentation fault.
 *	Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 4.4.8-2
 -	GA - Bump release of all rpms
 *   Thu Apr 28 2016 Alexey Makhalov <amakhalov@vmware.com> 4.4.8-1

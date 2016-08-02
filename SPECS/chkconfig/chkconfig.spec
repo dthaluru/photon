@@ -15,16 +15,16 @@ Requires: libsepol
 Requires: newt
 Requires: popt
 Requires: slang
-BuildRequires: newt-devel 
-BuildRequires: gettext 
-BuildRequires: popt-devel 
+BuildRequires: newt-devel
+BuildRequires: gettext
+BuildRequires: popt-devel
 BuildRequires: libselinux-devel
 Conflicts: initscripts <= 5.30-1
 
 %description
 Chkconfig is a basic system utility.  It updates and queries runlevel
 information for system services.  Chkconfig manipulates the numerous
-symbolic links in /etc/rc.d, to relieve system administrators of some 
+symbolic links in /etc/rc.d, to relieve system administrators of some
 of the drudgery of manually editing the symbolic links.
 
 %package -n ntsysv

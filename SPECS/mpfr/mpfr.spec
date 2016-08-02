@@ -16,7 +16,7 @@ The MPFR package contains functions for multiple precision math.
 Summary:	Header and development files for mpfr
 Requires:	%{name} = %{version}
 %description	devel
-It contains the libraries and header files to create applications 
+It contains the libraries and header files to create applications
 %prep
 %setup -q
 %build

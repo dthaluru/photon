@@ -293,4 +293,4 @@ class constants(object):
         kernelsubrelease = kernelsubrelease.replace(constants.dist,"")
         if kernelsubrelease:
             kernelsubrelease = "."+kernelsubrelease
-            constants.specData.addMacro("kernelsubrelease",kernelsubrelease) 
+            constants.specData.addMacro("kernelsubrelease",kernelsubrelease)

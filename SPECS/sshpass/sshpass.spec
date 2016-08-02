@@ -1,4 +1,4 @@
-Summary:	Noninteractive ssh password provider 
+Summary:	Noninteractive ssh password provider
 Name:		sshpass
 Version:	1.05
 Release:	3%{?dist}
@@ -11,11 +11,11 @@ Vendor:		VMware, Inc.
 Distribution:	Photon
 Requires:       openssh
 %description
-sshpass is a utility designed for running ssh using the mode referred to as "keyboard-interactive" password authentication, but in non-interactive mode. 
+sshpass is a utility designed for running ssh using the mode referred to as "keyboard-interactive" password authentication, but in non-interactive mode.
 %prep
 %setup -q
 %build
-./configure --prefix=%{_prefix} 
+./configure --prefix=%{_prefix}
 make %{?_smp_mflags}
 %install
 rm -rf %{buildroot}
@@ -24,7 +24,7 @@ make prefix=%{_prefix}	DESTDIR=%{buildroot} install
 %check
 make -k check |& tee %{_specdir}/%{name}-check-log || %{nocheck}
 
-%clean 
+%clean
 rm -rf %{buildroot}/*
 
 %files

@@ -8,7 +8,7 @@ Group:		Applications/System
 Vendor:		VMware, Inc.
 Distribution: 	Photon
 BuildArch:      noarch
-Source0:	http://mirrors.gigenet.com/apache/tomcat/tomcat-8/v8.0.35/bin/%{name}-%{version}.tar.gz	
+Source0:	http://mirrors.gigenet.com/apache/tomcat/tomcat-8/v8.0.35/bin/%{name}-%{version}.tar.gz
 %define sha1 apache-tomcat=568d9be6a80304035b367fcfd932e0dbe9f2fd54
 Requires: openjre >= 1.8.0.45
 
@@ -62,6 +62,6 @@ rm -rf %{buildroot}/*
 *	Mon Nov 16 2015 Sharath George <sharathg@vmware.com> 7.0.63-3
 -	Change path to /var/opt.
 *	Wed Sep 16 2015 Harish Udaiya Kumar <hudaiyakumar@vmware.com> 7.0.63-2
--	Updated dependency after repackaging openjdk. 
+-	Updated dependency after repackaging openjdk.
 *	Wed Jul 8 2015 Sriram Nambakam <snambakam@vmware.com> 7.0.63
 -	Initial build.	First version

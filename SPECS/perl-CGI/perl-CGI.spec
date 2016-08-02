@@ -34,7 +34,7 @@ submissions, file uploads, reading and writing cookies, query string
 generation and manipulation, and processing and preparing HTTP headers. Some
 HTML generation utilities are included as well.
 
-CGI.pm performs very well in in a vanilla CGI.pm environment and also comes 
+CGI.pm performs very well in in a vanilla CGI.pm environment and also comes
 with built-in support for mod_perl and mod_perl2 as well as FastCGI.
 
 %prep

@@ -48,7 +48,7 @@ mkdir -p -m 700 %{buildroot}/var/opt
 
 cp -r /var/opt/apache-ant-%{version} %{buildroot}/var/opt
 
-cp %{_builddir}/%{name}-%{version}/maven-ant-tasks-2.1.3/maven-ant-tasks-2.1.3.jar %{buildroot}/%{_libdir}/ 
+cp %{_builddir}/%{name}-%{version}/maven-ant-tasks-2.1.3/maven-ant-tasks-2.1.3.jar %{buildroot}/%{_libdir}/
 
 MAVEN_ANT_TASKS_DIR=%{buildroot}/var/opt/%{name}-%{version}/maven-ant-tasks
 

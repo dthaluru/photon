@@ -15,7 +15,7 @@ Source2:          rpm-system-configuring-scripts-2.2.tar.gz
 %define sha1 rpm-system-configuring-scripts=9461cdc0b65f7ecc244bfa09886b4123e55ab5a8
 Patch0:		  rpm-debuginfo-exclude.1.patch
 #Requires:        nspr
-Requires:         nss 
+Requires:         nss
 Requires:         popt
 Requires:         libgcc
 Requires:         lua

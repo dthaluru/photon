@@ -32,7 +32,7 @@ BuildRequires: ncurses-devel
 IPTraf is a console-based network statistics utility for Linux. It gathers a variety of figures such as TCP connection packet and byte counts, interface statistics and activity indicators, TCP/UDP traffic breakdowns, and LAN station packet and byte counts.
 
 %prep
-%setup -q 
+%setup -q
 %patch7 -p1 -b .compile
 %patch12 -p1 -b .ipv6
 %patch13 -p1 -b .ipv6-fix

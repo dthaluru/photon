@@ -18,14 +18,14 @@ Requires:	XML-Parser
 
 %description
 gtkmm provides a C++ interface to the GTK+ GUI library. gtkmm2 wraps GTK+ 2.
-Highlights include typesafe callbacks, widgets extensible via inheritance and 
+Highlights include typesafe callbacks, widgets extensible via inheritance and
 a comprehensive set of widget classes that can be freely combined to quickly create complex user interfaces.
 
 %package devel
 Summary: Header files for glibmm
 Group: Applications/System
 Requires: %{name} = %{version}
-Requires:	glib-devel libsigc++ 
+Requires:	glib-devel libsigc++
 %description devel
 These are the header files of glibmm.
 
@@ -34,18 +34,18 @@ These are the header files of glibmm.
 %build
 ./configure \
 	--prefix=%{_prefix} \
-	--bindir=%{_bindir} 
+	--bindir=%{_bindir}
 make %{?_smp_mflags}
 %install
 make DESTDIR=%{buildroot} install
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
-%files 
+%files
 %defattr(-,root,root)
 %{_libdir}/*.so.*
 %{_libdir}/pkgconfig/*.pc
 %{_libdir}/glibmm-2.4/proc/*
-%files devel 
+%files devel
 %defattr(-,root,root)
 %{_libdir}/*.so
 %{_libdir}/*.la

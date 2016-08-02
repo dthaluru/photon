@@ -50,14 +50,14 @@ Gsettings schemas compiling tool
 %prep
 %setup -q
 %build
-./configure --prefix=/usr --with-pcre=system 
+./configure --prefix=/usr --with-pcre=system
 make %{?_smp_mflags}
 %install
 make DESTDIR=%{buildroot} install
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-%files 
+%files
 %defattr(-,root,root)
 %{_libdir}/libglib-*.so.*
 %{_libdir}/libgthread-*.so.*

@@ -15,10 +15,10 @@ BuildRequires:  systemd
 Requires:       systemd
 
 %description
-Xinetd is a powerful inetd replacement. Xinetd has access control 
-mechanisms, extensive logging capabilities, the ability to make 
-services available based on time, can place limits on the number 
-of servers that can be started, and has a configurable defence 
+Xinetd is a powerful inetd replacement. Xinetd has access control
+mechanisms, extensive logging capabilities, the ability to make
+services available based on time, can place limits on the number
+of servers that can be started, and has a configurable defence
 mechanism to protect against port scanners, among other things.
 
 %prep
@@ -27,7 +27,7 @@ mechanism to protect against port scanners, among other things.
 %build
   ./configure \
 	--sbindir=%{buildroot}/%{_sbindir} 	\
-	--mandir=%{buildroot}/%{_datadir}/man 
+	--mandir=%{buildroot}/%{_datadir}/man
   make
 
 %install
@@ -36,7 +36,7 @@ mkdir -p %{buildroot}/%{_sbindir}
 mkdir -p %{buildroot}/etc/rc.d/init.d
 mkdir -p %{buildroot}/etc/xinetd.d
 
-%makeinstall  
+%makeinstall
 install -m 0600 contrib/xinetd.conf %{buildroot}/etc/
 cp contrib/xinetd.d/* %{buildroot}/etc/xinetd.d
 mkdir -p %{buildroot}/lib/systemd/system
@@ -46,7 +46,7 @@ cp %{SOURCE1} %{buildroot}/lib/systemd/system/xinetd.service
 rm -rf %{buildroot}
 
 %post
-%{_sbindir}/ldconfig 
+%{_sbindir}/ldconfig
 if [ $1 -eq 1 ] ; then
     # Initial installation
     # Enabled by default per "runs once then goes away" exception
@@ -61,7 +61,7 @@ fi
 
 %files
 %defattr(-, root, root)
-%doc CHANGELOG COPYRIGHT README xinetd/sample.conf contrib/empty.conf 
+%doc CHANGELOG COPYRIGHT README xinetd/sample.conf contrib/empty.conf
 %{_sbindir}/*
 %{_datadir}/man/*/*
 %attr(0750, root, root) %config(noreplace) /etc/xinetd.conf
@@ -70,7 +70,7 @@ fi
 
 %changelog
 *   Thu May 26 2016 Divya Thaluru <dthaluru@vmware.com>  2.3.15-6
--   Fixed logic to restart the active services after upgrade 
+-   Fixed logic to restart the active services after upgrade
 *	Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 2.3.15-5
 -	GA - Bump release of all rpms
 *   Wed May 4 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 2.3.15-4

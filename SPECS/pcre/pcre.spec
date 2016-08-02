@@ -47,9 +47,9 @@ ln -sfv ../../lib/$(readlink %{buildroot}/usr/lib/libpcre.so) %{buildroot}/usr/l
 ln -sfv $(readlink %{buildroot}/usr/lib/libpcre.so) %{buildroot}/usr/lib/libpcre.so.0
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
-%files 
+%files
 %defattr(-,root,root)
-%{_bindir}/pcregrep  
+%{_bindir}/pcregrep
 %{_bindir}/pcretest
 %{_mandir}/man1/pcregrep.1*
 %{_mandir}/man1/pcretest.1*
@@ -58,7 +58,7 @@ ln -sfv $(readlink %{buildroot}/usr/lib/libpcre.so) %{buildroot}/usr/lib/libpcre
 %files devel
 %defattr(-, root, root)
 %{_bindir}/*
-%exclude %{_bindir}/pcregrep  
+%exclude %{_bindir}/pcregrep
 %exclude %{_bindir}/pcretest
 %{_defaultdocdir}/%{name}-%{version}/*
 %{_mandir}/*/*
@@ -76,4 +76,4 @@ ln -sfv $(readlink %{buildroot}/usr/lib/libpcre.so) %{buildroot}/usr/lib/libpcre
 *	Mon Nov 30 2015 Sharath George <sharathg@vmware.com> 8.36-2
 	Add symlink for libpcre.so.1
 *	Thu Nov 06 2014 Sharath George <sharathg@vmware.com> 8.36-1
-	Initial version	
+	Initial version

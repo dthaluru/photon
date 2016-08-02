@@ -49,6 +49,6 @@ cd %{buildroot}/var/opt && tar xvzf %{_prefix}/ant-contrib-1.0b3-bin.tar.gz --wi
 *   Mon Nov 16 2015 Sharath George <sharathg@vmware.com> 1.0b3.0-2
 -   Change path to /var/opt.
 *   Wed Sep 16 2015 Harish Udaiya Kumar <hudaiyakumar@vmware.com> 1.0b3.0-1
--   Updated dependencies after repackaging openjdk. 
+-   Updated dependencies after repackaging openjdk.
 *   Tue Jun 9 2015 Sriram Nambakam <snambakam@vmware.com> 1.0b3.0-0
 -   Initial commit

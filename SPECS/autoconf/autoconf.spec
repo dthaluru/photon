@@ -34,7 +34,7 @@ rm -rf %{buildroot}%{_infodir}
 *	Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 2.69-4
 -	GA - Bump release of all rpms
 *	Fri Jun 5 2015 Divya Thaluru <dthaluru@vmware.com> 2.69-3
--	Adding m4 package to build and run time required package 
+-	Adding m4 package to build and run time required package
 *	Wed Jun 3 2015 Divya Thaluru <dthaluru@vmware.com> 2.69-2
 -	Adding perl packages to required packages
 *	Wed Nov 5 2014 Divya Thaluru <dthaluru@vmware.com> 2.69-1

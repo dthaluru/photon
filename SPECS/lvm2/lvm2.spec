@@ -1,4 +1,4 @@
-Summary:	Userland logical volume management tools 
+Summary:	Userland logical volume management tools
 Name:		lvm2
 Version:	2.02.141
 Release:	5%{?dist}
@@ -104,7 +104,7 @@ Requires:	systemd
 %description -n device-mapper-libs
 This package contains the device-mapper shared library, libdevmapper.
 
-%post -n device-mapper-libs 
+%post -n device-mapper-libs
 /sbin/ldconfig
 
 %postun -n device-mapper-libs
@@ -122,7 +122,7 @@ This package contains the dmeventd daemon for monitoring the state
 of device-mapper devices.
 
 %post -n device-mapper-event
-%systemd_post dm-event.service dm-event.socket 
+%systemd_post dm-event.service dm-event.socket
 if [ $1 -eq 1 ];then
     # This is initial installation
     systemctl start dm-event.socket
@@ -428,9 +428,9 @@ cp %{SOURCE1} %{buildroot}/lib/systemd/system/lvm2-activate.service
 -	GA - Bump release of all rpms
 *   Thu May 05 2016 Kumar Kaushik <kaushikk@vmware.com> 2.02.141-4
 -   Adding upgrade support in pre/post/un scripts.
-*   Thu Jan 28 2016 Anish Swaminathan <anishs@vmware.com> 2.02.141-3 
+*   Thu Jan 28 2016 Anish Swaminathan <anishs@vmware.com> 2.02.141-3
 -   Fix post scripts for lvm
-*   Thu Jan 28 2016 Anish Swaminathan <anishs@vmware.com> 2.02.141-2 
+*   Thu Jan 28 2016 Anish Swaminathan <anishs@vmware.com> 2.02.141-2
 -   Adding device mapper event to Requires
 *   Tue Jan 12 2016 Anish Swaminathan <anishs@vmware.com>  2.02.116-4
 -   Change config file attributes.

@@ -19,7 +19,7 @@ editing and history capabilities.
 Summary:	Header and development files for readline
 Requires:	%{name} = %{version}
 %description	devel
-It contains the libraries and header files to create applications 
+It contains the libraries and header files to create applications
 %prep
 %setup -q
 sed -i '/MV.*old/d' Makefile.in

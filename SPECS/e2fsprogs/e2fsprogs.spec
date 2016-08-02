@@ -16,7 +16,7 @@ the ext2 file system.
 Summary:	Header and development files for e2fsprogs
 Requires:	%{name} = %{version}
 %description	devel
-It contains the libraries and header files to create applications 
+It contains the libraries and header files to create applications
 %prep
 %setup -q
 install -vdm 755 build

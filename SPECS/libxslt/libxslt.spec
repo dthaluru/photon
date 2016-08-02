@@ -13,7 +13,7 @@ Requires:	libxml2-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	python2
 %description
-The libxslt package contains XSLT libraries used for extending libxml2 libraries to support XSLT files. 
+The libxslt package contains XSLT libraries used for extending libxml2 libraries to support XSLT files.
 
 %package devel
 Summary: Development Libraries for libxslt

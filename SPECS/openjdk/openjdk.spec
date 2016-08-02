@@ -1,5 +1,5 @@
 %define _use_internal_dependency_generator 0
-Summary:	OpenJDK 
+Summary:	OpenJDK
 Name:		openjdk
 Version:	1.8.0.92
 Release:	3%{?dist}
@@ -13,7 +13,7 @@ Source0:	http://anduin.linuxfromscratch.org/files/BLFS/OpenJDK-%{version}/OpenJD
 Requires:       openjre = %{version}-%{release}
 AutoReqProv: 	no
 %description
-The OpenJDK package installs java class library and javac java compiler. 
+The OpenJDK package installs java class library and javac java compiler.
 
 %package	-n openjre
 Summary:	Jave runtime environtment
@@ -24,7 +24,7 @@ It contains the libraries files for Java runtime environment
 #%filter_from_requires ^libgif.*$
 
 %package		sample
-Summary:		Sample java applications. 
+Summary:		Sample java applications.
 Group:          Development/Languages/Java
 %description	sample
 It contains the Sample java applications.
@@ -41,7 +41,7 @@ Requires:       %{name} = %{version}-%{release}
 Summary:        OpenJDK Java classes for developers
 Group:          Development/Languages/Java
 %description	src
-This package provides the runtime library class sources. 
+This package provides the runtime library class sources.
 Requires:       %{name} = %{version}-%{release}
 
 %prep -p exit
@@ -49,8 +49,8 @@ Requires:       %{name} = %{version}-%{release}
 %build
 
 %install
-install -vdm755 %{buildroot}/var/opt/OpenJDK-%{version}-bin 
-mv -v %{_builddir}/OpenJDK-%{version}-x86_64-bin/* %{buildroot}/var/opt/OpenJDK-%{version}-bin/         
+install -vdm755 %{buildroot}/var/opt/OpenJDK-%{version}-bin
+mv -v %{_builddir}/OpenJDK-%{version}-x86_64-bin/* %{buildroot}/var/opt/OpenJDK-%{version}-bin/
 chown -R root:root %{buildroot}/var/opt/OpenJDK-%{version}-bin
 install -vdm644 %{buildroot}/etc/profile.d
 
@@ -151,10 +151,10 @@ rm -rf %{buildroot}/*
 *	Mon Nov 16 2015 Sharath George <sharathg@vmware.com> 1.8.0.51-3
 -	Change to use /var/opt path
 *	Fri Sep 11 2015 Harish Udaiya Kumar <hudaiyakumar@vmware.com> 1.8.0.51-2
--	Split the openjdk into multiple sub-packages to reduce size. 
+-	Split the openjdk into multiple sub-packages to reduce size.
 *	Mon Aug 17 2015 Sharath George <sarahc@vmware.com> 1.8.0.51-1
 -	Moved to the next version
 *	Tue Jun 30 2015 Sarah Choi <sarahc@vmware.com> 1.8.0.45-2
--	Add JRE path 
+-	Add JRE path
 *	Mon May 18 2015 Sharath George <sharathg@vmware.com> 1.8.0.45-1
 -	Initial build.	First version

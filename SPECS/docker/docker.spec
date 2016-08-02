@@ -7,7 +7,7 @@ URL:        	http://docs.docker.com
 Group:      	Applications/File
 Vendor:     	VMware, Inc.
 Distribution:   Photon
-Source0:	https://get.docker.com/builds/Linux/x86_64/%{name}-%{version}.tgz 
+Source0:	https://get.docker.com/builds/Linux/x86_64/%{name}-%{version}.tgz
 %define sha1 docker=1bfd065784e0f422c000d86da4feda87cd63ced8
 Source1: 	docker.service
 Source2: 	docker-containerd.service
@@ -54,7 +54,7 @@ rm -rf %{buildroot}/*
 *   Tue Jun 28 2016 Anish Swaminathan <anishs@vmware.com> 1.11.2-1
 -   Upgraded to version 1.11.2
 *   Thu May 26 2016 Divya Thaluru <dthaluru@vmware.com>  1.11.0-6
--   Fixed logic to restart the active services after upgrade 
+-   Fixed logic to restart the active services after upgrade
 *   Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 1.11.0-5
 -   GA - Bump release of all rpms
 *   Tue May 10 2016 Anish Swaminathan <anishs@vmware.com> 1.11.0-4

@@ -19,7 +19,7 @@ compression percentage than with the traditional gzip.
 Summary:	Header and development files for bzip2
 Requires:	bzip2
 %description	devel
-It contains the libraries and header files to create applications 
+It contains the libraries and header files to create applications
 %prep
 %setup -q
 %patch0 -p1
@@ -82,7 +82,7 @@ make -k check |& tee %{_specdir}/%{name}-check-log || %{nocheck}
 *	Tue Nov 10 2015 Mahmoud Bassiouny <mbassiouny@vmware.com> 1.0.6-4
 -	Providing libbz2.so.1, miror fix for devel provides.
 *	Fri Jun 5 2015 Divya Thaluru <dthaluru@vmware.com> 1.0.6-3
--	Adding bzip2 package run time required package for bzip2-devel package 
+-	Adding bzip2 package run time required package for bzip2-devel package
 *	Mon May 18 2015 Touseef Liaqat <tliaqat@vmware.com> 1.0.6-2
 -	Update according to UsrMove.
 *	Wed Nov 5 2014 Divya Thaluru <dthaluru@vmware.com> 1.0.6-1

@@ -32,12 +32,12 @@ Requires:	%{name} = %{version}
 %build
 ./configure --prefix=%{_prefix}                        	\
 	    --disable-static				\
-	    --with-apache-libexecdir 
+	    --with-apache-libexecdir
 
 make %{?_smp_mflags}
 
 %install
-make -j1 DESTDIR=%{buildroot} install 
+make -j1 DESTDIR=%{buildroot} install
 %find_lang %{name}
 %files -f %{name}.lang
 %defattr(-,root,root)
@@ -59,7 +59,7 @@ make -j1 DESTDIR=%{buildroot} install
 *	Tue Nov 10 2015 Xiaolin Li <xiaolinl@vmware.com> 1.8.13-5
 -	Handled locale files with macro find_lang
 * 	Tue Sep 22 2015 Harish Udaiya Kumar <hudaiyakumar@vmware.com> 1.8.13-4
--	Updated build-requires after creating devel package for apr. 
+-	Updated build-requires after creating devel package for apr.
 *   Mon Sep 21 2015 Xiaolin Li <xiaolinl@vmware.com> 1.8.13-3
 -   Move .a, and .so files to devel pkg.
 *	Tue Sep 08 2015 Vinay Kulkarni <kulkarniv@vmware.com> 1.8.13-2

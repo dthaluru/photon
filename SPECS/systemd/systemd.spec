@@ -247,13 +247,13 @@ rm -rf %{buildroot}/*
 *    Tue Aug 25 2015 Alexey Makhalov <amakhalov@vmware.com> 216-9
 -    Reduce systemd-networkd boot time (exclude if-rename patch).
 *    Mon Jul 20 2015 Divya Thaluru <dthaluru@vmware.com> 216-8
--    Adding sysvinit support 
+-    Adding sysvinit support
 *    Mon Jul 06 2015 Kumar Kaushik <kaushikk@vmware.com> 216-7
 -    Fixing networkd/udev race condition for renaming interface.
 *    Thu Jun 25 2015 Sharath George <sharathg@vmware.com> 216-6
 -    Remove debug files.
 *    Tue Jun 23 2015 Divya Thaluru <dthaluru@vmware.com> 216-5
--    Building compat libs 
+-    Building compat libs
 *    Mon Jun 1 2015 Alexey Makhalov <amakhalov@vmware.com> 216-4
 -    gudev support
 *    Wed May 27 2015 Divya Thaluru <dthaluru@vmware.com> 216-3

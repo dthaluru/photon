@@ -24,11 +24,11 @@ make %{?_smp_mflags} PREFIX=%{_prefix} \
 [ %{buildroot} != "/"] && rm -rf %{buildroot}/*
 make DESTDIR=%{buildroot} \
     PREFIX=%{_prefix} \
-    install 
+    install
 
 %clean
 rm -rf %{buildroot}/*
-%files 
+%files
 %defattr(-,root,root)
 %{_bindir}/*
 %{_lib64dir}/*

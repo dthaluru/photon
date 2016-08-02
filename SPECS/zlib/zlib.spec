@@ -15,7 +15,7 @@ Compression and decompression routines
 Summary:	Header and development files for zlib
 Requires:	%{name} = %{version}
 %description	devel
-It contains the libraries and header files to create applications 
+It contains the libraries and header files to create applications
 for handling compiled objects.
 %prep
 %setup -q

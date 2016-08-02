@@ -33,10 +33,10 @@ find %{buildroot}/%{_libdir} -name '*.la' -delete
 rm -rf %{buildroot}/%{_infodir}
 %find_lang %{name}
 
-%post 
+%post
 /sbin/ldconfig
 
-%postun 
+%postun
 /sbin/ldconfig
 
 echo %{_libdir}

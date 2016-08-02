@@ -19,7 +19,7 @@ Multi-format archive and compression library
 Summary:	Header and development files
 Requires:	%{name} = %{version}
 %description	devel
-It contains the libraries and header files to create applications 
+It contains the libraries and header files to create applications
 
 %prep
 %setup -q

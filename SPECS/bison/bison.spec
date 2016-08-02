@@ -45,6 +45,6 @@ make -k check |& tee %{_specdir}/%{name}-check-log || %{nocheck}
 *	Tue Nov 10 2015 Xiaolin Li <xiaolinl@vmware.com> 3.0.2-3
 -	Handled locale files with macro find_lang
 *	Fri Jun 5 2015 Divya Thaluru <dthaluru@vmware.com> 3.0.2-2
--	Adding m4, flex package to build and run time required package 
+-	Adding m4, flex package to build and run time required package
 *	Wed Nov 5 2014 Divya Thaluru <dthaluru@vmware.com> 3.0.2-1
 -	Initial build. First version.

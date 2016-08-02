@@ -32,7 +32,7 @@ autoconf
 
 %build
 sed -i 's/$(LIBTOOL) $(INSTALL) -c libgdbm.la $(INSTALL_ROOT)$(libdir)\/libgdbm.la/$(LIBTOOL) $(INSTALL) -c libgdbm.la -o $(INSTALL_ROOT)$(libdir)\/libgdbm.la/g' Makefile.in
-sed -i 's/$(INSTALL_ROOT)$(libdir)\/libgdbm_compat.la/ -o $(INSTALL_ROOT)$(libdir)\/libgdbm_compat.la/g' Makefile.in 
+sed -i 's/$(INSTALL_ROOT)$(libdir)\/libgdbm_compat.la/ -o $(INSTALL_ROOT)$(libdir)\/libgdbm_compat.la/g' Makefile.in
 %configure --disable-static
 make %{?_smp_mflags} LIBTOOL='/usr/bin/libtool --tag=CC'
 

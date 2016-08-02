@@ -29,7 +29,7 @@ touch -r src/man/man8/%{name}.8 src/man/man8/%{name}.8.gz
 install -p --mode 644 src/man/man8/%{name}.8.gz %{buildroot}%{_mandir}/man8
 %clean
 rm -rf %{buildroot}/*
-%files 
+%files
 %defattr(-,root,root)
 %{_sbindir}/%{name}
 %{_mandir}/man8/%{name}.8.gz

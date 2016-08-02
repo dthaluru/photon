@@ -36,9 +36,9 @@ class PackageBuildDataGenerator(object):
         self.__getSortedBuildOrderListForGivenPackages(listPackages)
         return self.__mapCyclesToPackageList, self.__mapPackageToCycle, self.__sortedPackageList
 
-    #todo    
+    #todo
     def findCompleteListOfPackagesRequiredToBuildGivenPackages(self,listPackages):
-        return self.__buildDependencyGraph.keys()    
+        return self.__buildDependencyGraph.keys()
 
     def createSortListForPkg(self,pkg):
         runTimeDepPkgList=self.__runTimeDependencyGraph[pkg]

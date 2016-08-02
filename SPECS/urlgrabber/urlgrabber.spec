@@ -21,7 +21,7 @@ Requires:		python2
 Requires:		curl
 
 %description
-A high-level cross-protocol url-grabber for python supporting HTTP, FTP 
+A high-level cross-protocol url-grabber for python supporting HTTP, FTP
 and file locations.  Features include keepalive, byte ranges, throttling,
 authentication, proxies and more.
 

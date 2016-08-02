@@ -1,4 +1,4 @@
-fail() {	
+fail() {
     local _red="\\033[1;31m"
 	local _normal="\\033[0;39m"
 	[ -n "$*" ] && printf "${_red}$*${_normal}\n"
@@ -21,7 +21,7 @@ print_succeeded_in_green() {
 }
 
 run_command() {
-	# $1 = message 
+	# $1 = message
 	# $2 = command
 	# $3 = log file
 	local _msg="${1}"

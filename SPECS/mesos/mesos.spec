@@ -104,7 +104,7 @@ find %{buildroot}%{_libdir} -name '*.la' -delete
 *	Fri Sep 18 2015 Vinay Kulkarni <kulkarniv@vmware.com> 0.24.0-1
 -	Upgrade to mesos 0.24.0
 *	Wed Sep 16 2015 Harish Udaiya Kumar <hudaiyakumar.com> 0.23.0-3
--	Updated the dependencies after repackaging the openjdk. 
+-	Updated the dependencies after repackaging the openjdk.
 *	Tue Sep 08 2015 Vinay Kulkarni <kulkarniv@vmware.com> 0.23.0-2
 -	Move headers, pc, dev libs into devel pkg.
 *	Tue Sep 01 2015 Vinay Kulkarni <kulkarniv@vmware.com> 0.23.0-1

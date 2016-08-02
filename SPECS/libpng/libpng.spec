@@ -17,10 +17,10 @@ The libpng package contains libraries used by other programs for reading and wri
 Summary:	Header and development files
 Requires:	%{name} = %{version}-%{release}
 %description	devel
-It contains the libraries and header files to create applications 
+It contains the libraries and header files to create applications
 
 %prep
-%setup -q 
+%setup -q
 %build
 ./configure \
 	--prefix=%{_prefix} \

@@ -13,15 +13,15 @@ Vendor:       VMware, Inc.
 Distribution: Photon
 
 %description
-Fakeroot-ng is a clean re-implementation of fakeroot. The core idea 
-is to run a program, but wrap all system calls that program performs 
-so that it thinks it is running as root, while it is, in practice, 
-running as an unprivileged user. When the program is trying to perform 
-a privileged operation (such as modifying a file's owner or creating 
-a block device), this operation is emulated, so that an unprivileged 
-operation is actually carried out, but the result of the privileged 
-operation is reported to the program whenever it attempts to query 
-the result. 
+Fakeroot-ng is a clean re-implementation of fakeroot. The core idea
+is to run a program, but wrap all system calls that program performs
+so that it thinks it is running as root, while it is, in practice,
+running as an unprivileged user. When the program is trying to perform
+a privileged operation (such as modifying a file's owner or creating
+a block device), this operation is emulated, so that an unprivileged
+operation is actually carried out, but the result of the privileged
+operation is reported to the program whenever it attempts to query
+the result.
 
 %prep
 %setup -q

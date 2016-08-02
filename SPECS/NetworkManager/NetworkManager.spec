@@ -67,7 +67,7 @@ EOF
 
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
-%files 
+%files
 %defattr(-,root,root)
 %{_sysconfdir}/NetworkManager/NetworkManager.conf
 %{_bindir}/*
@@ -82,9 +82,9 @@ EOF
 %{_mandir}/man8/*
 %{_sysconfdir}/dbus-1/system.d/*
 %{_datadir}/gtk-doc/*
-%{_datadir}/bash-completion/*  
-%{_datadir}/dbus-1/*  
-%{_datadir}/doc/*  
+%{_datadir}/bash-completion/*
+%{_datadir}/dbus-1/*
+%{_datadir}/doc/*
 %{_datadir}/locale/*
 %{_datadir}/polkit-1/*
 /lib/udev/rules.d/*.rules
@@ -101,9 +101,9 @@ EOF
 * 	Tue Feb 23 2016 Anish Swaminathan <anishs@vmware.com>  1.0.10-1
 - 	Upgrade to 1.0.10
 *	Mon Dec 14 2015	Anish Swaminathan<anishs@vmware.com> 1.0.2-4
--	Adding the missing BuildRequires 
+-	Adding the missing BuildRequires
 *	Tue	Sep 22 2015	Harish Udaiya Kumar<hudaiyakumar@vmware.com> 1.0.2-3
--	Adding the missing Requires list 
+-	Adding the missing Requires list
 *	Thu Jul 23 2015 Divya Thaluru <dthaluru@vmware.com> 1.0.2-2
 -	Building with dhclient.
 *	Tue Jun 23 2015 Divya Thaluru <dthaluru@vmware.com> 1.0.2-1

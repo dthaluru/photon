@@ -16,7 +16,7 @@ Group:          Development/Libraries
 License:        GPL+ or Artistic
 URL:            http://dbi.perl.org/
 # The source tarball must be repackaged to remove the DBI/FAQ.pm, since the
-# license is not a FSF free license. 
+# license is not a FSF free license.
 # Source0:        http://www.cpan.org/authors/id/T/TI/TIMB/DBI-%{version}.tar.gz
 Source0:        DBI-%{version}_repackaged.tar.gz
 %define sha1 DBI=fa7b80ea3e3b41195d7d39252a19ad5f25e970f8
@@ -25,14 +25,14 @@ Distribution:	Photon
 BuildRequires:  perl
 Requires:	perl
 
-%description 
+%description
 DBI is a database access Application Programming Interface (API) for
 the Perl Language. The DBI API Specification defines a set of
 functions, variables and conventions that provide a consistent
 database interface independent of the actual database being used.
 
 %prep
-%setup -q -n DBI-%{version} 
+%setup -q -n DBI-%{version}
 for F in lib/DBD/Gofer.pm; do
     iconv -f ISO-8859-1 -t UTF-8 < "$F" > "${F}.utf8"
     touch -r "$F" "${F}.utf8"
@@ -64,7 +64,7 @@ done
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
-make 
+make
 
 %install
 make pure_install DESTDIR=%{buildroot}

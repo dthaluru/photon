@@ -1,6 +1,6 @@
 Summary:	Packet Analyzer
 Name:		tcpdump
-Version:	4.7.4	
+Version:	4.7.4
 Release:	2%{?dist}
 License:	BSD
 URL:		http://www.tcpdump.org
@@ -12,8 +12,8 @@ Distribution:	Photon
 BuildRequires: 	libpcap
 Requires:	libpcap
 %description
-Tcpdump is a common packet analyzer that runs under the command line. 
-It allows the user to display TCP/IP and other packets being 
+Tcpdump is a common packet analyzer that runs under the command line.
+It allows the user to display TCP/IP and other packets being
 transmitted or received over a network to which the computer is attached.
 %prep
 %setup -q

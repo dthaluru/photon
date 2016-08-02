@@ -17,7 +17,7 @@ Requires:      libusb
 BuildRequires: systemd
 
 %description
-The USB Utils package contains an utility used to display information 
+The USB Utils package contains an utility used to display information
 about USB buses in the system and the devices connected to them.
 
 %prep

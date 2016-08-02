@@ -27,7 +27,7 @@ License:	LGPLv3+
 Group:		System Environment/Libraries
 
 %description libopts
-Libopts is very powerful command line option parser. 
+Libopts is very powerful command line option parser.
 
 %package libopts-devel
 Summary:	Development files for libopts

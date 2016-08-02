@@ -78,7 +78,7 @@ make install DESTDIR=%{buildroot}
 %preun
 %systemd_preun auditd.service
 
-%files 
+%files
 %defattr(-,root,root)
 %{_bindir}/*
 %{_sbindir}/*
@@ -122,7 +122,7 @@ make install DESTDIR=%{buildroot}
 *   Fri Jul 22 2016 Xiaolin Li <xiaolinl@vmware.com> 2.5-5
 -   Add gawk requirement.
 *   Thu May 26 2016 Divya Thaluru <dthaluru@vmware.com>  2.5-4
--   Fixed logic to restart the active services after upgrade 
+-   Fixed logic to restart the active services after upgrade
 *	Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 2.5-3
 -	GA - Bump release of all rpms
 * Tue May 3 2016 Divya Thaluru <dthaluru@vmware.com>  2.5-2

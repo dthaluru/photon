@@ -35,7 +35,7 @@ pasv_min_port=40000
 pasv_max_port=40100
 #allow_writeable_chroot=YES
 #write_enable=YES
-#local_umask=022 
+#local_umask=022
 #anon_upload_enable=YES
 #anon_mkdir_write_enable=YES
 EOF

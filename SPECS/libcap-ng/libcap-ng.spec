@@ -33,7 +33,7 @@ The libraries and header files needed for libcap_ng development.
 
 make %{?_smp_mflags}
 %install
-make DESTDIR=%{buildroot} install 
+make DESTDIR=%{buildroot} install
 
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig

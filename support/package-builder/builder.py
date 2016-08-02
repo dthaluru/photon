@@ -5,7 +5,7 @@ import os.path
 from CommandUtils import CommandUtils
 from Logger import Logger
 from constants import constants
-from PackageManager import PackageManager 
+from PackageManager import PackageManager
 import json
 import sys
 from SpecUtils import Specutils
@@ -67,7 +67,7 @@ def main():
 
     if not os.path.isfile(options.inputJSONFile) and not options.installPackage:
         logger.error("Given JSON File is not a file:"+options.inputJSONFile)
-        errorFlag = True    
+        errorFlag = True
     if not os.path.isfile(options.pkgBuildOptionFile):
         logger.warning("Given JSON File is not a file:"+options.pkgBuildOptionFile)
 
@@ -142,7 +142,7 @@ def main():
         sys.exit(1)
 
     logger.info("Writing Package info to the file:"+pkgInfoJsonFile)
-    SourcePackageInfo.writePkgListToFile(pkgInfoJsonFile)   
+    SourcePackageInfo.writePkgListToFile(pkgInfoJsonFile)
     sys.exit(0)
 
 def buildToolChain(buildThreads):
@@ -204,7 +204,7 @@ def buildSourcesList(specPath,sourcePath, yamlDir, logger, singleFile=False):
                     sourceName = None
                     if len(listSourceNames) >0:
                         sourceName=listSourceNames[0]
-                        sha1 = spec.getChecksumForSource(sourceName)                       
+                        sha1 = spec.getChecksumForSource(sourceName)
                         if sha1 is not None:
                             PullSources.get(sourceName, sha1, sourcePath, constants.pullsourcesConfig)
 

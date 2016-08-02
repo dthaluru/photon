@@ -63,7 +63,7 @@ CFLAGS="-D_PATH_DHCLIENT_SCRIPT='\"/sbin/dhclient-script\"'         \
     	--enable-log-pid \
 	--enable-paranoia --enable-early-chroot
 
-make 
+make
 %install
 make DESTDIR=%{buildroot} install
 install -v -m755 client/scripts/linux %{buildroot}/usr/sbin/dhclient-script

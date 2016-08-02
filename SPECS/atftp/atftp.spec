@@ -52,7 +52,7 @@ mkdir -p %{buildroot}/%{_var}/lib/tftpboot
 mkdir -p %{buildroot}/lib/systemd/system
 cat << EOF >> %{buildroot}/lib/systemd/system/atftpd.service
 [Unit]
-Description=The tftp server serves files using the trivial file transfer protocol. 
+Description=The tftp server serves files using the trivial file transfer protocol.
 
 [Service]
 EnvironmentFile=/etc/sysconfig/atftpd
@@ -126,7 +126,7 @@ fi
 
 %changelog
 *   Thu May 26 2016 Divya Thaluru <dthaluru@vmware.com>  0.7.1-7
--   Fixed logic to restart the active services after upgrade 
+-   Fixed logic to restart the active services after upgrade
 *	Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 0.7.1-6
 -	GA - Bump release of all rpms
 *   Fri May 6 2016 Divya Thaluru <dthaluru@vmware.com>  0.7.1-5

@@ -51,7 +51,7 @@ make INSTALLROOT=%{buildroot} \
 mkdir -p %{buildroot}/lib/systemd/system
 cat << EOF >> %{buildroot}/lib/systemd/system/tftpd.service
 [Unit]
-Description=The tftp server serves files using the trivial file transfer protocol. 
+Description=The tftp server serves files using the trivial file transfer protocol.
 
 [Service]
 ExecStart=/usr/sbin/in.tftpd -s /var/lib/tftpboot
@@ -99,7 +99,7 @@ rm -rf %{buildroot}
 
 %changelog
 *   Thu May 26 2016 Divya Thaluru <dthaluru@vmware.com>  5.2-6
--   Fixed logic to restart the active services after upgrade 
+-   Fixed logic to restart the active services after upgrade
 *	Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 5.2-5
 -	GA - Bump release of all rpms
 *   Wed May 4 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 5.2-4
@@ -184,7 +184,7 @@ rm -rf %{buildroot}
 - changed "wait" in xinetd file to "yes" (hpa-tftpd forks and exits) (#26467)
 - fixed hpa-tftpd to handle files greater than 32MB (#23725)
 - added "-l" flag to hpa-tftpd for file-logging (#26467)
-- added description for "-l" to the man-page 
+- added description for "-l" to the man-page
 
 * Thu Feb 08 2001 Helge Deller <hdeller@redhat.de>
 - updated tftp client to 0.17 stable (#19640),
@@ -248,7 +248,7 @@ rm -rf %{buildroot}
 * Wed Apr  7 1999 Jeff Johnson <jbj@redhat.com>
 - tftpd should truncate file when overwriting (#412)
 
-* Sun Mar 21 1999 Cristian Gafton <gafton@redhat.com> 
+* Sun Mar 21 1999 Cristian Gafton <gafton@redhat.com>
 - auto rebuild in the new build environment (release 22)
 
 * Mon Mar 15 1999 Jeff Johnson <jbj@redhat.com>

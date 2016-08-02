@@ -33,7 +33,7 @@ sed -i "s/u8 arglen;/u8 arglen = 0;/g" lldp_util.c
 make %{?_smp_mflags}
 
 %install
-make DESTDIR=%{buildroot} install 
+make DESTDIR=%{buildroot} install
 find %{buildroot} -name '*.la' -exec rm -f {} ';'
 mkdir -p %{buildroot}/lib/systemd/system
 mkdir -p %{buildroot}%{_sharedstatedir}/%{name}

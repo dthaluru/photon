@@ -33,7 +33,7 @@ decisions.  Required for any applications that use the SELinux API.
 %package	utils
 Summary:	SELinux libselinux utilies
 Group:		Development/Libraries
-Requires:	libselinux = %{version}-%{release} 
+Requires:	libselinux = %{version}-%{release}
 
 %description	utils
 The libselinux-utils package contains the utilities
@@ -42,24 +42,24 @@ The libselinux-utils package contains the utilities
 Summary:	SELinux python bindings for libselinux
 Group:		Development/Libraries
 Requires:	libselinux = %{version}-%{release}
-Requires:	python2 
+Requires:	python2
 Requires:	python2-libs
 
 %description	python
-The libselinux-python package contains the python bindings for developing 
-SELinux applications. 
+The libselinux-python package contains the python bindings for developing
+SELinux applications.
 
 %package	devel
 Summary:	Header files and libraries used to build SELinux
 Group:		Development/Libraries
 Requires:	libselinux = %{version}-%{release}
 Requires:	pcre-devel
-Requires:	libsepol-devel 
+Requires:	libsepol-devel
 Provides:	pkgconfig(libselinux)
 
 %description	devel
 The libselinux-devel package contains the libraries and header files
-needed for developing SELinux applications. 
+needed for developing SELinux applications.
 
 %prep
 %setup -qn %{name}-%{version}-rc1

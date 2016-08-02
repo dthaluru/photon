@@ -14,8 +14,8 @@ BuildRequires:	python2 >= 2.7.8
 BuildRequires:	python2-libs >= 2.7.8
 Requires:	python2
 %description
-Itstool extracts messages from XML files and outputs PO template files, then merges 
-translations from MO files to create translated XML files. It determines what 
+Itstool extracts messages from XML files and outputs PO template files, then merges
+translations from MO files to create translated XML files. It determines what
 to translate and how to chunk it into messages using the W3C Internationalization Tag Set (ITS).
 %prep
 %setup -q

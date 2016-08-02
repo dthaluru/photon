@@ -91,7 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 *   Thu May 26 2016 Divya Thaluru <dthaluru@vmware.com>  0.7.6-10
--   Fixed logic to restart the active services after upgrade 
+-   Fixed logic to restart the active services after upgrade
 *	Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 0.7.6-9
 -	GA - Bump release of all rpms
 *   Tue May 3 2016 Divya Thaluru <dthaluru@vmware.com>  0.7.6-8

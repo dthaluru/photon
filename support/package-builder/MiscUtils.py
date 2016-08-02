@@ -14,7 +14,7 @@ class MiscUtils(object):
             if thresholdTimeStamp is None:
                 thresholdTimeStamp = t
             if t < thresholdTimeStamp:
-                thresholdTimeStamp = t 
+                thresholdTimeStamp = t
         for f in listInputFiles:
             t=os.path.getmtime(f)
             if t > thresholdTimeStamp:

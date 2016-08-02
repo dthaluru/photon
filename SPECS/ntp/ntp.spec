@@ -22,9 +22,9 @@ Requires:       systemd
 Requires:	shadow
 Requires:	libcap >= 2.24
 %description
-The ntp package contains a client and server to keep the time 
-synchronized between various computers over a network. This 
-package is the official reference implementation of the 
+The ntp package contains a client and server to keep the time
+synchronized between various computers over a network. This
+package is the official reference implementation of the
 NTP protocol.
 
 %package -n	ntpstat
@@ -103,7 +103,7 @@ if ! getent passwd ntp >/dev/null; then
 	useradd -c "Network Time Protocol" -d /var/lib/ntp -u 87 -g ntp -s /bin/false ntp
 fi
 %post
-%{_sbindir}/ldconfig 
+%{_sbindir}/ldconfig
 %systemd_post ntpd.service
 
 %preun

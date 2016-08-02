@@ -9,7 +9,7 @@ Vendor:           VMware, Inc.
 Distribution:     Photon
 Source0:          http://www.skbuff.net/iputils/%{name}-s%{version}.tar.bz2
 BuildRequires:    libcap-devel openssl-devel gnutls-devel libgcrypt-devel
-Requires:         libcap 
+Requires:         libcap
 Requires:         openssl
 Requires:         gnutls
 Requires:         libgcrypt
@@ -21,11 +21,11 @@ The Iputils package contains programs for basic networking.
 %setup -q -n %{name}-s%{version}
 
 %build
-make %{?_smp_mflags} 
+make %{?_smp_mflags}
 (
 cd ninfod
-./configure --prefix=%{_prefix} 
-make %{?_smp_mflags} 
+./configure --prefix=%{_prefix}
+make %{?_smp_mflags}
 )
 #make html
 #make man

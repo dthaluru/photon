@@ -1,6 +1,6 @@
 Summary:	C/C++ library for network traffic capture
 Name:		libpcap
-Version:	1.7.4	
+Version:	1.7.4
 Release:	2%{?dist}
 License:	BSD
 URL:		http://www.tcpdump.org

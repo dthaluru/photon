@@ -93,7 +93,7 @@ find %{buildroot}%{_libdir} -name '*.la' -delete
 *   Fri Oct 9 2015 Xiaolin Li <xiaolinl@vmware.com> 2.50.0-4
 -   Removing la files from packages.
 *   Mon Jul 20 2015 Divya Thaluru <dthaluru@vmware.com> 2.50.0-3
--   Addinf libxml2 to Requires 
+-   Addinf libxml2 to Requires
 *   Mon Jul 13 2015 Alexey Makhalov <amakhalov@vmware.com> 2.50.0-2
 -   Exclude /usr/lib/debug
 *   Fri Jun 5 2015 Touseef Liaqat <tliaqat@vmware.com> 2.50.0-1

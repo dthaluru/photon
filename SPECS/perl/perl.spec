@@ -21,7 +21,7 @@ Provides:	perl >= 0:5.003000
 Provides:	perl(getopts.pl)
 Provides:   /bin/perl
 BuildRequires:  zlib-devel, bzip2-devel
-Requires:	zlib 
+Requires:	zlib
 Requires:	gdbm
 Requires:	glibc
 Requires:	libgcc

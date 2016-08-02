@@ -15,7 +15,7 @@ BuildRequires:  python2-devel
 Requires: python2
 
 %description
-cgroup-utils provides utility tools and libraries for control groups of Linux. For example, 
+cgroup-utils provides utility tools and libraries for control groups of Linux. For example,
 cgutil top is a top-like tool which shows activities of running processes in control groups.
 
 %prep

@@ -27,9 +27,9 @@ Provides: 	python(abi)
 Provides: 	/bin/python
 
 %description
-The Python 2 package contains the Python development environment. It 
-is useful for object-oriented programming, writing scripts, 
-prototyping large programs or developing entire applications. This 
+The Python 2 package contains the Python development environment. It
+is useful for object-oriented programming, writing scripts,
+prototyping large programs or developing entire applications. This
 version is for backward compatibility with other dependent packages.
 
 %package libs
@@ -45,8 +45,8 @@ Requires:	coreutils
 # Requires: binutils
 
 %description libs
-The python interpreter can be embedded into applications wanting to 
-use python as an embedded scripting language.  The python-libs package 
+The python interpreter can be embedded into applications wanting to
+use python as an embedded scripting language.  The python-libs package
 provides the libraries needed for this.
 
 %package -n python-xml
@@ -58,7 +58,7 @@ Requires: python2-libs = %{version}-%{release}
 The python-xml package provides the libraries needed for XML manipulation.
 
 %package -n python-curses
-Summary: Python module interface for NCurses Library 
+Summary: Python module interface for NCurses Library
 Group: Applications/System
 Requires: python2-libs = %{version}-%{release}
 Requires: ncurses
@@ -118,7 +118,7 @@ make %{?_smp_mflags}
 [ %{buildroot} != "/"] && rm -rf %{buildroot}/*
 make DESTDIR=%{buildroot} install
 chmod -v 755 %{buildroot}%{_libdir}/libpython2.7.so.1.0
-%{_fixperms} %{buildroot}/* 
+%{_fixperms} %{buildroot}/*
 
 # Remove unused stuff
 find $RPM_BUILD_ROOT/ -name "*~"|xargs rm -f
@@ -139,7 +139,7 @@ make -k check |& tee %{_specdir}/%{name}-check-log || %{nocheck}
 %clean
 rm -rf %{buildroot}/*
 
-%files 
+%files
 %defattr(-, root, root)
 %doc LICENSE README
 %{_bindir}/pydoc*

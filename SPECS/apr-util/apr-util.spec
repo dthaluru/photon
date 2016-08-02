@@ -26,7 +26,7 @@ Summary: APR utility library development kit
 Requires: apr-devel
 Requires: %{name} = %{version}
 %description devel
-This package provides the support files which can be used to 
+This package provides the support files which can be used to
 build applications using the APR utility library.
 
 %package ldap
@@ -116,11 +116,11 @@ rm -rf $RPM_BUILD_ROOT
 *   Wed Apr 13 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 1.5.4-6
 -   remove libexpat files
 *	Tue Sep 22 2015 Harish Udaiya Kumar <hudaiyakumar@vmware.com> 1.5.4-5
--	Updated build-requires after creating devel package for apr. 
+-	Updated build-requires after creating devel package for apr.
 *   Wed Sep 16 2015 Xiaolin Li <xiaolinl@vmware.com> 1.5.4-4
 -   Seperate Separate apr-util to apr-util, apr-util-devel, aprutil-ldap, apr-util-pgsql, and apr-utilsqlite.
 *   Wed Jul 15 2015 Sarah Choi <sarahc@vmware.com> 1.5.4-4
--   Use apuver(=1) instead of version for mesos 
+-   Use apuver(=1) instead of version for mesos
 *   Mon Jul 13 2015 Alexey Makhalov <amakhalov@vmware.com> 1.5.2-3
 -   Exclude /usr/lib/debug
 *   Wed Jul 01 2015 Touseef Liaqat <tliaqat@vmware.com> 1.5.2-2

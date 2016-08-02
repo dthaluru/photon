@@ -38,7 +38,7 @@ chmod -v 766 %{buildroot}%{_libdir}/libpci.so
 %clean
 rm -rf %{buildroot}/*
 
-%files 
+%files
 %defattr(-,root,root)
 %{_sbindir}/*
 %{_libdir}/*.so.*
@@ -46,7 +46,7 @@ rm -rf %{buildroot}/*
 %{_datadir}/misc/*
 %{_mandir}/*
 
-%files devel 
+%files devel
 %defattr(-,root,root)
 %{_libdir}/pkgconfig/*
 %{_libdir}/*.so

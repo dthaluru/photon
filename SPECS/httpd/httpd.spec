@@ -10,7 +10,7 @@ Distribution: Photon
 Source0:        http://archive.apache.org/dist/httpd/%{name}-%{version}.tar.bz2
 %define sha1 httpd=271a129f2f04e3aa694e5c2091df9b707bf8ef80
 Patch0: http://www.linuxfromscratch.org/patches/blfs/svn/httpd-2.4.18-blfs_layout-1.patch
-Patch1: httpd-2.4.18-CVE-2016-5387.patch 
+Patch1: httpd-2.4.18-CVE-2016-5387.patch
 BuildRequires: openssl
 BuildRequires: openssl-devel
 BuildRequires: pcre-devel

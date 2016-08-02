@@ -24,7 +24,7 @@ Requires: 	kpartx = %{version}-%{release}
 
 %description
 Device-mapper-multipath provides tools to manage multipath devices by
-instructing the device-mapper multipath kernel module what to do. 
+instructing the device-mapper multipath kernel module what to do.
 
 %package -n kpartx
 Summary:	Partition device manager for device-mapper devices

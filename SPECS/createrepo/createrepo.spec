@@ -63,7 +63,7 @@ make DESTDIR=$RPM_BUILD_ROOT install
 - 0.4.10
 
 * Wed May 16 2007 Paul Nasrat <pnasrat at redhat.com>
-- 0.4.9 
+- 0.4.9
 
 * Mon Feb 12 2007 Seth Vidal <skvidal at linux.duke.edu>
 - 0.4.8
@@ -98,7 +98,7 @@ make DESTDIR=$RPM_BUILD_ROOT install
 
 
 * Thu Oct 21 2004 Seth Vidal <skvidal@phy.duke.edu>
-- ghost files not being added into primary file list if 
+- ghost files not being added into primary file list if
   matching regex
 - 0.4.1
 
@@ -144,7 +144,7 @@ make DESTDIR=$RPM_BUILD_ROOT install
 - 0.3
 
 * Tue Jan 13 2004 Seth Vidal <skvidal@phy.duke.edu>
-- 0.2 - 
+- 0.2 -
 
 * Sat Jan 10 2004 Seth Vidal <skvidal@phy.duke.edu>
 - first packaging

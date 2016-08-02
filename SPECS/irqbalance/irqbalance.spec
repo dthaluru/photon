@@ -22,7 +22,7 @@ interrupts across all of a systems cpus.
 	--prefix=%{_prefix} \
 	--disable-static \
 	--with-systemd
-	
+
 make %{?_smp_mflags}
 %install
 make DESTDIR=%{buildroot} install

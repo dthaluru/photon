@@ -82,7 +82,7 @@ touch %{buildroot}/%{_localstatedir}/log/waagent.log
 * Thu Apr 28 2016 Anish Swaminathan <anishs@vmware.com> 2.0.18-1
 - Update to 2.0.18
 * Thu Jan 28 2016 Anish Swaminathan <anishs@vmware.com> 2.0.14-3
-- Removed redundant requires 
+- Removed redundant requires
 * Thu Aug 6 2015 Anish Swaminathan <anishs@vmware.com>
 - Added sha1sum
 * Fri Mar 13 2015 - mbassiouny@vmware.com

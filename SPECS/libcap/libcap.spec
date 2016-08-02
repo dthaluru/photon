@@ -12,8 +12,8 @@ Distribution:	Photon
 Requires:	attr
 BuildRequires:	attr
 %description
-The libcap package implements the user-space interfaces to the POSIX 1003.1e capabilities available 
-in Linux kernels. These capabilities are a partitioning of the all powerful root privilege 
+The libcap package implements the user-space interfaces to the POSIX 1003.1e capabilities available
+in Linux kernels. These capabilities are a partitioning of the all powerful root privilege
 into a set of distinct privileges.
 
 %package        devel

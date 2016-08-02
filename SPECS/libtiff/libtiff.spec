@@ -18,7 +18,7 @@ The LibTIFF package contains the TIFF libraries and associated utilities. The li
 Summary:	Header and development files
 Requires:	%{name} = %{version}-%{release}
 %description	devel
-It contains the libraries and header files to create applications 
+It contains the libraries and header files to create applications
 
 %prep
 %setup -q -n tiff-%{version}

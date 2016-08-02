@@ -4,7 +4,7 @@ Version:        1.6.9
 Release:        1%{?dist}
 License:        LGPLv2+
 URL:            https://github.com/maxmind/geoip-api-c
-Source0:        https://github.com/maxmind/geoip-api-c/releases/download/v%{version}/GeoIP-%{version}.tar.gz 
+Source0:        https://github.com/maxmind/geoip-api-c/releases/download/v%{version}/GeoIP-%{version}.tar.gz
 %define sha1 GeoIP=ac0deb2309c14d5763e82fa4139de1f3193ab6b1
 Group:          Development/Libraries
 Vendor:         VMware, Inc.

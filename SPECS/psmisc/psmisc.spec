@@ -22,7 +22,7 @@ about running processes.
 %patch1 -p1
 %build
 ./configure \
-	--prefix=%{_prefix} 
+	--prefix=%{_prefix}
 make %{?_smp_mflags}
 %install
 make DESTDIR=%{buildroot} install

@@ -20,12 +20,12 @@ Requires:   krb5 >= 1.12
 Requires:       Linux-PAM
 Requires:       systemd
 %description
-The Cyrus SASL package contains a Simple Authentication and Security 
-Layer, a method for adding authentication support to 
+The Cyrus SASL package contains a Simple Authentication and Security
+Layer, a method for adding authentication support to
 connection-based protocols. To use SASL, a protocol includes a command
-for identifying and authenticating a user to a server and for 
+for identifying and authenticating a user to a server and for
 optionally negotiating protection of subsequent protocol interactions.
-If its use is negotiated, a security layer is inserted between the 
+If its use is negotiated, a security layer is inserted between the
 protocol and the connection.
 %prep
 %setup -q
@@ -101,7 +101,7 @@ EOF
 %check
 make -k check |& tee %{_specdir}/%{name}-check-log || %{nocheck}
 %post
-%{_sbindir}/ldconfig 
+%{_sbindir}/ldconfig
 %systemd_post saslauthd.service
 
 %postun
@@ -127,7 +127,7 @@ rm -rf %{buildroot}/*
 %{_mandir}/man8/saslauthd.8.gz
 %changelog
 *   Thu May 26 2016 Divya Thaluru <dthaluru@vmware.com>  2.1.26-8
--   Fixed logic to restart the active services after upgrade 
+-   Fixed logic to restart the active services after upgrade
 *	Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 2.1.26-7
 -	GA - Bump release of all rpms
 *   Tue May 3 2016 Divya Thaluru <dthaluru@vmware.com>  2.1.26-6

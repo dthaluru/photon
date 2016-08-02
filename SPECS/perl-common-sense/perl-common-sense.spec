@@ -2,7 +2,7 @@
 # This arch-specific package has no binaries and generates no debuginfo
 %global debug_package %{nil}
 
-Summary:	"Common sense" Perl defaults 
+Summary:	"Common sense" Perl defaults
 Name:		perl-common-sense
 Version:	3.74
 Release:	2%{?dist}
@@ -12,7 +12,7 @@ URL:		http://search.cpan.org/dist/common-sense
 Source0:	http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/common-sense-%{version}.tar.gz
 %define sha1 common-sense=b32990086501a68bdb10bfa85160866d270aa8ae
 Vendor:		VMware, Inc.
-Distribution:	Photon 
+Distribution:	Photon
 BuildRequires:	perl
 Requires:	perl
 Patch1:		common-sense-3.71-podenc.patch

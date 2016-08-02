@@ -20,7 +20,7 @@ Requires:	perl
 SQLite is a public domain RDBMS database engine that you can find at
 http://www.hwaci.com/sw/sqlite/.
 
-This module provides a SQLite RDBMS module that uses the system SQLite 
+This module provides a SQLite RDBMS module that uses the system SQLite
 libraries.
 
 %prep

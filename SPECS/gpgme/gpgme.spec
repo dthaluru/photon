@@ -14,7 +14,7 @@ Requires:	libgpg-error
 BuildRequires:	libgpg-error
 BuildRequires:	libassuan >= 2.2.0
 %description
-The GPGME package is a C language library that allows to add support for cryptography to a program. It is designed to make access to public key crypto engines like GnuPG or GpgSM easier for applications. GPGME provides a high-level crypto API for encryption, decryption, signing, signature verification and key management.  
+The GPGME package is a C language library that allows to add support for cryptography to a program. It is designed to make access to public key crypto engines like GnuPG or GpgSM easier for applications. GPGME provides a high-level crypto API for encryption, decryption, signing, signature verification and key management.
 
 %package 	devel
 Group:          Development/Libraries
@@ -37,7 +37,7 @@ rm %{buildroot}/%{_libdir}/*.la
 rm -rf %{buildroot}/%{_infodir}
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
-%files 
+%files
 %defattr(-,root,root)
 %{_libdir}/*.so.*
 %{_datadir}/common-lisp/source/gpgme/*.lisp

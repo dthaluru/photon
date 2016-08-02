@@ -73,6 +73,6 @@ make -k check |& tee %{_specdir}/%{name}-check-log || %{nocheck}
 *   Mon Oct 12 2015 Xiaolin Li <xiaolinl@vmware.com> 2.5.38-3
 -   Moving static lib files to devel package.
 *	Fri Jun 5 2015 Divya Thaluru <dthaluru@vmware.com> 2.5.38-2
--	Adding m4 package to build and run time required package 
+-	Adding m4 package to build and run time required package
 *	Wed Nov 5 2014 Divya Thaluru <dthaluru@vmware.com> 2.5.38-1
 -	Initial build.	First version

@@ -1,4 +1,4 @@
-Summary:	Boost 
+Summary:	Boost
 Name:		boost
 Version:	1.60.0
 Release:	2%{?dist}
@@ -12,7 +12,7 @@ Source0:	http://downloads.sourceforge.net/boost/boost_1_60_0.tar.bz2
 BuildRequires:	bzip2-devel
 
 %description
-Boost provides a set of free peer-reviewed portable C++ source libraries. It includes libraries for 
+Boost provides a set of free peer-reviewed portable C++ source libraries. It includes libraries for
 linear algebra, pseudorandom number generation, multithreading, image processing, regular expressions and unit testing.
 
 %package        devel

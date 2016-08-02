@@ -12,12 +12,12 @@ Vendor:     	VMware, Inc.
 Distribution:   Photon
 Requires:	systemd
 Requires:	iproute2
-BuildRequires:	glib-devel 
+BuildRequires:	glib-devel
 BuildRequires:	python2
 BuildRequires:	python2-libs
-BuildRequires:	popt-devel 
-BuildRequires:	gettext 
-BuildRequires:	pkg-config 
+BuildRequires:	popt-devel
+BuildRequires:	gettext
+BuildRequires:	pkg-config
 BuildRequires:	systemd
 Provides:	/sbin/service
 
@@ -167,7 +167,7 @@ rm -rf %{buildroot}%{_prefix}/lib/systemd
 *   Tue Jan 26 2016 Xiaolin Li <xiaolinl@vmware.com> 9.65-1
 -   Updated to version 9.65
 * Mon Jul 20 2015 Divya Thaluru <dthaluru@vmware.com> 9.63-1
-- Got Spec file from source tar ball and modified it to be compatible to build in Photon 
+- Got Spec file from source tar ball and modified it to be compatible to build in Photon
 * Mon May 18 2015 Lukáš Nykrýn <lnykryn@redhat.com> - 9.63-1
 - remove ipcalc, it has its own package now
 - network: tell NM to reload its configuration during start

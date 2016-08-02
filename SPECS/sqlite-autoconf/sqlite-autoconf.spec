@@ -14,7 +14,7 @@ Obsoletes:	libsqlite
 Provides:	sqlite3
 %description
 This package contains most of the static files that comprise the
-www.sqlite.org website including all of the SQL Syntax and the 
+www.sqlite.org website including all of the SQL Syntax and the
 C/C++ interface specs and other miscellaneous documentation.
 %prep
 %setup -q -n %{name}-%{sourcever}

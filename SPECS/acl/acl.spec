@@ -69,10 +69,10 @@ chmod 0755 %{buildroot}%{_libdir}/libacl.so.*.*.*
 
 %find_lang %{name}
 
-%post -n libacl 
+%post -n libacl
 /sbin/ldconfig
 
-%postun -n libacl 
+%postun -n libacl
 /sbin/ldconfig
 
 %files -f %{name}.lang
@@ -90,7 +90,7 @@ chmod 0755 %{buildroot}%{_libdir}/libacl.so.*.*.*
 %{_includedir}/sys/acl.h
 %{_mandir}/man3/acl_*
 %{_libdir}/libacl.a
-%{_datadir}/doc/acl/*   
+%{_datadir}/doc/acl/*
 %{_libexecdir}/libacl.a
 %{_libexecdir}/libacl.so
 

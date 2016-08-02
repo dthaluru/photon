@@ -10,7 +10,7 @@ Source0: 	ftp://ftp.porcupine.org/pub/security/%{name}_%{version}.tar.gz
 Patch0:		http://www.linuxfromscratch.org/patches/blfs/6.3/tcp_wrappers-7.6-shared_lib_plus_plus-1.patch
 
 %description
-The TCP Wrapper package provides daemon wrapper programs that report the name of the client requesting network services and the requested service. 
+The TCP Wrapper package provides daemon wrapper programs that report the name of the client requesting network services and the requested service.
 
 %package devel
 Summary:	The libraries and header files needed for tcp_wrappers development.
@@ -32,7 +32,7 @@ mkdir -p %{buildroot}%{_libdir}
 mkdir -p %{buildroot}%{_sbindir}
 mkdir -p %{buildroot}%{_mandir}/man{3,5,8}
 mkdir -p %{buildroot}%{_includedir}
-make DESTDIR=%{buildroot} install 
+make DESTDIR=%{buildroot} install
 
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig

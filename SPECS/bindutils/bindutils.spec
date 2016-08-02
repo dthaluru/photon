@@ -12,8 +12,8 @@ Distribution:	Photon
 Requires:	openssl
 BuildRequires:	openssl-devel
 %description
-BIND is open source software that implements the Domain Name System (DNS) protocols 
-for the Internet. It is a reference implementation of those protocols, but it is 
+BIND is open source software that implements the Domain Name System (DNS) protocols
+for the Internet. It is a reference implementation of those protocols, but it is
 also production-grade software, suitable for use in high-volume and high-reliability applications.
 %prep
 %setup -qn bind-%{version}-P1
@@ -51,7 +51,7 @@ if ! getent passwd named >/dev/null; then
 fi
 %post -p /sbin/ldconfig
 
-%postun	
+%postun
 /sbin/ldconfig
 if getent passwd named >/dev/null; then
     userdel named
@@ -78,6 +78,6 @@ fi
 *   Thu Jan 21 2016 Xiaolin Li <xiaolinl@vmware.com> 9.10.3-1
 -   Updated to version 9.10.3
 *	Tue Aug 11 2015 Divya Thaluru <dthaluru@vmware.com> 9.10.1-1
--	Fixing release 
+-	Fixing release
 *	Tue Jan 20 2015 Divya Thaluru <dthaluru@vmware.com> 9.10.1-P1
 -	Initial build. First version

@@ -13,7 +13,7 @@ Source0:	http://ftp.gnu.org/gnu/inetutils/%{name}-%{version}.tar.gz
 The Inetutils package contains programs for basic networking.
 %prep
 %setup -q
-echo '#define PATH_PROCNET_DEV "/proc/net/dev"' >> ifconfig/system/linux.h 
+echo '#define PATH_PROCNET_DEV "/proc/net/dev"' >> ifconfig/system/linux.h
 %build
 ./configure \
 	--prefix=%{_prefix} \

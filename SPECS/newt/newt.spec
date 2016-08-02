@@ -6,7 +6,7 @@ License:	GNU Library General Public License
 URL:		https://admin.fedoraproject.org/pkgdb/package/newt/
 Group:		Development/Languages
 Source0:	https://fedorahosted.org/releases/n/e/newt/%{name}-%{version}.tar.gz
-%define sha1 newt=2992c926bd3699ff0d6fd7549d4a8a018e3ac8fd  
+%define sha1 newt=2992c926bd3699ff0d6fd7549d4a8a018e3ac8fd
 Vendor:		VMware, Inc.
 Distribution:	Photon
 Requires: slang
@@ -27,7 +27,7 @@ Summary:	Header and development files for ncurses
 Requires:	%{name} = %{version}
 
 %description	devel
-It contains the libraries and header files to create applications 
+It contains the libraries and header files to create applications
 
 %prep
 %setup -q -n %{name}-%{version}

@@ -42,7 +42,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 %dir /boot
-/boot/initrd.img-no-kmods 
+/boot/initrd.img-no-kmods
 
 %changelog
 *   Thu Jun 30 2016 Xiaolin Li <xiaolinl@vmware.com> 1.0-4

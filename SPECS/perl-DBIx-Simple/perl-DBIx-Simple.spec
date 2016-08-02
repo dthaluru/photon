@@ -5,7 +5,7 @@ Version:        1.35
 Release:        2%{?dist}
 License:        Public Domain
 Group:          Development/Libraries
-Source0:        http://search.cpan.org/CPAN/authors/id/J/JU/JUERD/DBIx-Simple-%{version}.tar.gz 
+Source0:        http://search.cpan.org/CPAN/authors/id/J/JU/JUERD/DBIx-Simple-%{version}.tar.gz
 %define sha1 DBIx-Simple=a6d08abf6dd3bfef7c337054beb49611572880b8
 URL:            http://search.cpan.org/dist/DBIx-Simple/
 Vendor:		VMware, Inc.

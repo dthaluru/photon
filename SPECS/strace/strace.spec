@@ -12,8 +12,8 @@ Source0:	http://downloads.sourceforge.net/project/strace/strace/%{version}/%{nam
 BuildRequires:	libacl-devel, libaio-devel
 
 %description
-The strace program intercepts and displays the system calls made by a running process. strace also records 
-all the arugments and return values from the system calls. This is useful in debugging a process. 
+The strace program intercepts and displays the system calls made by a running process. strace also records
+all the arugments and return values from the system calls. This is useful in debugging a process.
 
 %prep
 %setup -q
@@ -29,12 +29,12 @@ make %{?_smp_mflags}
 make install DESTDIR=%{buildroot}
 
 %check
-make -k check 
+make -k check
 
 %clean
 rm -rf %{buildroot}/*
 
-%files 
+%files
 %defattr(-,root,root)
 %{_bindir}/*
 %{_mandir}/man1/*

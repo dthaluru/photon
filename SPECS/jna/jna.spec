@@ -78,6 +78,6 @@ $ANT_HOME/bin/ant -Ddist=$JNA_DIST_DIR dist -Drelease=true
 *   Fri Sep 18 2015 Divya Thaluru <dthaluru@vmware.com> 4.1.0-2
 -   Disabling tests
 *   Wed Sep 16 2015 Harish Udaiya Kumar <hudaiyakumar@vmware.com> 4.1.0-1
--   Updated dependencies after repackaging openjdk. 
+-   Updated dependencies after repackaging openjdk.
 *   Fri May 29 2015 Sriram Nambakam <snambakam@vmware.com> 4.1.0-0
 -   Initial commit

@@ -23,8 +23,8 @@ Requires:	Linux-PAM
 Requires: 	shadow
 %description
 The OpenSSH package contains ssh clients and the sshd daemon. This is
-useful for encrypting authentication and subsequent traffic over a 
-network. The ssh and scp commands are secure implementions of telnet 
+useful for encrypting authentication and subsequent traffic over a
+network. The ssh and scp commands are secure implementions of telnet
 and rcp respectively.
 %prep
 %setup -q

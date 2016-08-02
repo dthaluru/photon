@@ -24,8 +24,8 @@ BuildRequires:	python2-libs
 Requires:	python2
 Provides:	perl(gtkdoc-common.pl)
 %description
-The GTK-Doc package contains a code documenter. This is useful for extracting 
-specially formatted comments from the code to create API documentation. 
+The GTK-Doc package contains a code documenter. This is useful for extracting
+specially formatted comments from the code to create API documentation.
 %prep
 %setup -q
 %build

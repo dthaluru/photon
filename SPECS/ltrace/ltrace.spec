@@ -19,7 +19,7 @@ ltrace intercepts and records dynamic library calls which are called by an execu
 %build
 
 ./configure \
-	--prefix=%{_prefix} --disable-werror 
+	--prefix=%{_prefix} --disable-werror
 
 make %{?_smp_mflags}
 
@@ -27,12 +27,12 @@ make %{?_smp_mflags}
 make install DESTDIR=%{buildroot}
 
 %check
-make -k check 
+make -k check
 
 %clean
 rm -rf %{buildroot}/*
 
-%files 
+%files
 %defattr(-,root,root)
 /usr/etc/ltrace.conf
 %{_bindir}/*

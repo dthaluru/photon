@@ -13,8 +13,8 @@ BuildRequires:  libgpg-error >= 1.2
 
 %description
 Libksba is a library to make the tasks of working with X.509 certificates,
-CMS data and related objects more easy. It provides a highlevel interface 
-to the implemented protocols and presents the data in a consistent way. 
+CMS data and related objects more easy. It provides a highlevel interface
+to the implemented protocols and presents the data in a consistent way.
 
 %prep
 %setup -q

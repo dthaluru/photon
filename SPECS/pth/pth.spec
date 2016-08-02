@@ -12,8 +12,8 @@ Distribution:	Photon
 
 %description
 
-Pth is a very portable POSIX/ANSI-C based library for Unix platforms which 
-provides non-preemptive priority-based scheduling for multiple threads of 
+Pth is a very portable POSIX/ANSI-C based library for Unix platforms which
+provides non-preemptive priority-based scheduling for multiple threads of
 execution (aka ``multithreading'') inside event-driven applications. All
 threads run in the same address space of the server application, but each
 thread has it's own individual program-counter, run-time stack, signal

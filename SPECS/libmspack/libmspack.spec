@@ -20,7 +20,7 @@ make %{?_smp_mflags}
 make DESTDIR=%{buildroot} install
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
-%files 
+%files
 %defattr(-,root,root)
 %{_libdir}/*.a
 %{_libdir}/*.la

@@ -13,11 +13,11 @@ Patch0:		c_rehash.patch
 Patch1:         openssl-1.0.2f-ipv6apps.patch
 Patch2:         openssl-init-conslidate.patch
 Patch3:         openssl-use-fips-drbg-by-default.patch
-Requires:	bash glibc libgcc 
+Requires:	bash glibc libgcc
 
 %description
 The OpenSSL package contains management tools and libraries relating
-to cryptography. These are useful for providing cryptography 
+to cryptography. These are useful for providing cryptography
 functions to other packages, such as OpenSSH, email applications and
 web browsers (for accessing HTTPS sites).
 

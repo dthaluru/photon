@@ -81,11 +81,11 @@ if [ "$1" = "0" -a                      \
    %{_bindir}/vmware-rpctool 'tools.set.version 0' &> /dev/null || /bin/true
 fi
 
-%postun 
+%postun
 /sbin/ldconfig
 %systemd_postun_with_restart vmtoolsd.service vgauthd.service
 
-%files 
+%files
 %defattr(-,root,root)
 %{_libdir}/open-vm-tools/plugins/*
 %{_libdir}/*.so

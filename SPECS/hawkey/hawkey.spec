@@ -17,7 +17,7 @@ BuildRequires: 	rpm-devel
 Requires:	libsolv
 
 %description
-Hawkey is a library allowing clients to query and resolve dependencies of RPM 
+Hawkey is a library allowing clients to query and resolve dependencies of RPM
 packages based on the current state of RPMDB and yum repositories.
 
 %package devel

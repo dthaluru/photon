@@ -16,8 +16,8 @@ Patch1:		blfs_systemd_fixes.patch
 BuildRequires:  systemd
 Requires:       systemd
 %description
-The next part of this chapter deals with firewalls. The principal 
-firewall tool for Linux is Iptables. You will need to install 
+The next part of this chapter deals with firewalls. The principal
+firewall tool for Linux is Iptables. You will need to install
 Iptables if you intend on using any form of a firewall.
 %prep
 %setup -q
@@ -38,7 +38,7 @@ cp %{SOURCE2} .
 	--disable-nftables \
 	--enable-libipq \
 	--enable-devel
-	
+
 make V=0
 %install
 [ %{buildroot} != "/"] && rm -rf %{buildroot}/*

@@ -28,7 +28,7 @@ Patch11:       netfilter-x_tables-deal-with-bogus-nextoffset-values.patch
 Patch12:       netfilter-x_tables-check-for-size-overflow.patch
 Patch13:       REVERT-sched-fair-Beef-up-wake_wide.patch
 Patch14:       e1000e-prevent-div-by-zero-if-TIMINCA-is-zero.patch
-BuildRequires: bc 
+BuildRequires: bc
 BuildRequires: kbd
 BuildRequires: kmod
 BuildRequires: glib-devel
@@ -224,7 +224,7 @@ ln -sf %{name}-%{version}-%{release}.cfg /boot/photon.cfg
 *   Thu Aug 13 2015 Alexey Makhalov <amakhalov@vmware.com> 4.1.3-3
 -   Added environment file(photon.cfg) for a grub.
 *   Tue Aug 11 2015 Alexey Makhalov <amakhalov@vmware.com> 4.1.3-2
-    Added pci-probe-vmware.patch. Removed unused modules. Decreased boot time. 
+    Added pci-probe-vmware.patch. Removed unused modules. Decreased boot time.
 *   Tue Jul 28 2015 Alexey Makhalov <amakhalov@vmware.com> 4.1.3-1
-    Initial commit. Use patchset from Clear Linux. 
+    Initial commit. Use patchset from Clear Linux.
 

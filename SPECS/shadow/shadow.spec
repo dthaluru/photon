@@ -11,7 +11,7 @@ Source0:	http://pkg-shadow.alioth.debian.org/releases/%{name}-%{version}.tar.xz
 %define sha1 shadow=0917cbadd4ce0c7c36670e5ecd37bbed92e6d82d
 Source1:	PAM-Configuration-Files-1.5.tar.gz
 %define sha1 PAM=08052511f985e3b3072c194ac1287e036d9299fb
-Patch0: chkname-allowcase.patch   
+Patch0: chkname-allowcase.patch
 BuildRequires: 	cracklib
 BuildRequires: 	cracklib-devel
 Requires:   	cracklib

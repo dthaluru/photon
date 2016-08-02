@@ -20,7 +20,7 @@ make %{?_smp_mflags}
 make DESTDIR=%{buildroot} PREFIX="/usr" install
 %clean
 rm -rf %{buildroot}/*
-%files 
+%files
 %defattr(-,root,root)
 %{_sbindir}/*
 %{_libdir}/*

@@ -79,7 +79,7 @@ rm -rf %{buildroot}%{_libdir}/libhavege.*a
 rm -rf %{buildroot}
 
 %post
-/sbin/ldconfig 
+/sbin/ldconfig
 %systemd_post haveged.service
 
 %preun
@@ -120,8 +120,8 @@ rm -rf %{buildroot}
 * Sat Oct 13 2012 Jirka Hladky <hladky.jiri@gmail.com> - 1.5-2
 - BZ 850144
 - Introduce new systemd-rpm macros in haveged spec file
-- Fedora 19 changes the way how to work with services in spec files. 
-- It introduces new macros - systemd_post, systemd_preun and systemd_postun; 
+- Fedora 19 changes the way how to work with services in spec files.
+- It introduces new macros - systemd_post, systemd_preun and systemd_postun;
 - which replace scriptlets from Fedora 18 and older
 - see https://fedoraproject.org/wiki/Packaging:ScriptletSnippets#Systemd
 
@@ -131,7 +131,7 @@ rm -rf %{buildroot}
 - PIDFILE set to /run/haveged.pid
 - converted README and man page to UTF-8. Informed the upstream to fix it.
 * Wed Feb 15 2012 Jirka Hladky <hladky.jiri@gmail.com> - 1.4-3
-- PIDFile should be stored at /run instead of the default location /var/run 
+- PIDFile should be stored at /run instead of the default location /var/run
 - There is  long term plan that directory /var/run will not further exist in the future Fedora versions
 - Asked upstream to add -p <PID_FILE_location> switch to influence the location of the PID File
 - Set PIDFile=/var/run/haveged.pid This is needed as long -p option is not implemented
